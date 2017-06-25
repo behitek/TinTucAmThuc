@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<icon>stack</icon>
+	<type>topic</type>
+	<title>Topic</title>
+	<fields name="attribs">
+		<fieldset name="general_attribs"
+			label="Topic">
+			<!--IS REQUIRED FIELD-->
+			<field name="ctm_content_type"
+				   type="hidden"
+				   default="topic"
+				   label="PLG_JACONTENT_TYPE_CONTENT_TYPE_LABEL"
+				   description="PLG_JACONTENT_TYPE_CONTENT_TYPE_DESC"/>
+			<!--IS REQUIRED FIELD-->
+
+			<field name="ctm_series"
+				   type="series"
+				   default=""
+				   label="PLG_JACONTENT_TYPE_ARTICLES_LABEL"
+				   description="PLG_JACONTENT_TYPE_SERIES_OF_ARTICLES_IN_THIS_TOPIC_DESC"/>
+		</fieldset>
+	</fields>
+</form>

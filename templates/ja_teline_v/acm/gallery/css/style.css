@@ -1,0 +1,154 @@
+.gallery-list .photo-featured {
+  margin: 24px;
+}
+.gallery-list .photo-featured .item-image {
+  max-height: none;
+  margin: 0;
+}
+.gallery-list .photos-item .article-title {
+  margin: 12px 0;
+}
+.gallery-list .magazine-item.photos-item {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.gallery-list .magazine-item.photos-item .magazine-item-ct h4 {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.gallery-list .magazine-item.photos-item .item-image {
+  position: relative;
+  max-height: 160px;
+  margin-bottom: 0;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .gallery-list .magazine-item.photos-item .item-image {
+    max-height: 80px;
+  }
+}
+.gallery-list .magazine-item.photos-item .btn-fullscreen {
+  cursor: pointer;
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  z-index: 1001;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px;
+  width: 52px;
+  text-align: center;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+.gallery-list .magazine-item.photos-item .btn-fullscreen:hover,
+.gallery-list .magazine-item.photos-item .btn-fullscreen:focus {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.gallery-list .magazine-item.photos-item .carousel .item-image {
+  max-height: none;
+}
+.gallery-list .magazine-item.photos-item .btn-play {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  color: #ffffff;
+  font-size: 12px;
+  cursor: pointer;
+}
+.gallery-list .magazine-item.photos-item .btn-play .num-photos {
+  color: rgba(255, 255, 255, 0.7);
+}
+.gallery-list .magazine-item.photos-item .btn-play .slideshow-text {
+  display: none;
+}
+.gallery-list .magazine-item.photos-item:hover .btn-play {
+  background: #cc0000;
+  color: #ffffff;
+}
+.gallery-list .magazine-item.photos-item:hover .btn-play:hover .slideshow-text {
+  display: inline;
+}
+.gallery-list .magazine-item-media .category-name {
+  position: inherit;
+  bottom: auto;
+  left: auto;
+}
+.gallery-list .magazine-item-main .carousel-thumbnail .carousel-indicators,
+.gallery-list .magazine-categories .carousel-thumbnail .carousel-indicators {
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  width: auto;
+  margin: 0;
+}
+.gallery-list .magazine-item-main .carousel-thumbnail .carousel-indicators li,
+.gallery-list .magazine-categories .carousel-thumbnail .carousel-indicators li {
+  text-indent: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 0;
+  overflow: hidden;
+  border-color: #fff;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  margin: 0;
+  position: relative;
+}
+.gallery-list .magazine-item-main .carousel-thumbnail .carousel-indicators li img,
+.gallery-list .magazine-categories .carousel-thumbnail .carousel-indicators li img {
+  max-width: none !important;
+  max-height: none !important;
+  width: 100px;
+  height: auto;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  margin-left: -50%;
+  margin-top: -55%;
+}
+@media screen and (max-width: 991px) {
+  .gallery-list .magazine-item-main .carousel-thumbnail .carousel-indicators li,
+  .gallery-list .magazine-categories .carousel-thumbnail .carousel-indicators li {
+    width: 8px;
+    height: 8px;
+  }
+}
+.gallery-list .magazine-item-main .carousel-thumbnail .carousel-indicators li:focus,
+.gallery-list .magazine-categories .carousel-thumbnail .carousel-indicators li:focus,
+.gallery-list .magazine-item-main .carousel-thumbnail .carousel-indicators li:hover,
+.gallery-list .magazine-categories .carousel-thumbnail .carousel-indicators li:hover,
+.gallery-list .magazine-item-main .carousel-thumbnail .carousel-indicators li.active,
+.gallery-list .magazine-categories .carousel-thumbnail .carousel-indicators li.active {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.gallery-list .magazine-item-main .carousel-thumbnail .carousel-indicators li.active,
+.gallery-list .magazine-categories .carousel-thumbnail .carousel-indicators li.active {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.gallery-list .magazine-item-main .carousel-thumbnail .carousel-caption,
+.gallery-list .magazine-categories .carousel-thumbnail .carousel-caption {
+  bottom: auto;
+  top: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 12px 24px;
+  left: 20px;
+  right: 20px;
+}
+@media screen and (max-width: 480px) {
+  .gallery-list .magazine-item-main .carousel-thumbnail .carousel-caption,
+  .gallery-list .magazine-categories .carousel-thumbnail .carousel-caption {
+    padding: 12px;
+  }
+}

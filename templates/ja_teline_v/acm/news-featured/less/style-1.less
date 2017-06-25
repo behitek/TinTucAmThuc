@@ -1,0 +1,53 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+
+// --------------------------------------------------------
+// DEFAULT MAGAZINE STYLE
+// --------------------------------------------------------
+
+
+.magazine-featured {
+  &.style-1 {
+    
+    // Featured Leading Carousel
+    // ----------------------------
+    .magazine-carousel {
+      // Fix height for content
+      .magazine-item-main {
+        min-height: @line-height-computed * 11;
+        @media (max-width: @screen-xs) {
+          min-height: 0;
+        }
+      }
+    }
+
+    .event-info {
+      ul {
+        list-style: none;
+        margin-top: @global-margin / 2;
+        padding-left: 0;
+
+        li {
+          border-bottom: 1px solid @border-color;
+          padding-top: 4px;
+          padding-bottom: 4px;
+
+          i {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>Module - JA Yahoo Finance</name>
+	<author>JoomlArt.com</author>
+	<creationDate>31 Dec 2014</creationDate>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>www.joomlart.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Module JA Yahoo Finance</description>
+	<files>
+		<filename module="mod_jayahoo_finance">mod_jayahoo_finance.php</filename>
+		<folder>asset</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>yql.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_jayahoo_finance.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_jayahoo_finance.ini</language>
+		<language tag="en-GB">en-GB.mod_jayahoo_finance.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+						name="symbols"
+						type="textarea"
+						rows="3"
+						default="YHOO,GOOG,AAPL"
+						label="MOD_JAYAHOO_FINANCE_SYMBOLS_LABEL"
+						description="MOD_JAYAHOO_FINANCE_LIST_OF_SYMBOLS_SEPARATE_BY_COMMA_DESC" />
+			</fieldset>
+
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="owncache"
+					type="list"
+					default="1"
+					label="MOD_JAYAHOO_FINANCE_COM_MODULES_FIELD_CACHING_LABEL"
+					description="MOD_JAYAHOO_FINANCE_COM_MODULES_FIELD_CACHING_DESC"
+				>
+					<option value="1">MOD_JAYAHOO_FINANCE_JGLOBAL_USE_GLOBAL</option>
+					<option value="0">MOD_JAYAHOO_FINANCE_COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

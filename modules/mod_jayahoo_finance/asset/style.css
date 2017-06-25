@@ -1,0 +1,11 @@
+.ja-finance {}
+
+.ja-finance .table tr th {
+    white-space: nowrap;
+}
+.ja-finance .change-up {
+    color: #178817;
+}
+.ja-finance .change-down {
+    color: #CC171B;
+}

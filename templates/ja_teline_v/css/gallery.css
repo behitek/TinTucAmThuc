@@ -1,0 +1,6 @@
+@media screen and (max-width: 992px) {
+  .layout-gallery .logo {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

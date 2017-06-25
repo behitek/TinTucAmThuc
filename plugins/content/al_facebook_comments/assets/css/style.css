@@ -1,0 +1,26 @@
+/* v3.0.1 */
+.al_comments_box, 
+.al_comments_box .fb_iframe_widget,
+.al_comments_box  .fb_iframe_widget span,
+.al_comments_box .fb_iframe_widget[style],
+.al_comments_box .fb_iframe_widget iframe[style],
+.al_comments_box iframe[style] {
+width: 100% !important; /* Support for responsive design in Facebook comments */
+}
+.al_comments_container{width: 100%;clear: both;float: left;padding:0;margin:0;overflow: hidden;}
+.al_buttons_container{width: 100%;clear: both;float: left;padding:0 0 10px 0;margin:0}
+.al_comments_box{}
+.al_comments_count{}
+.al_btn{float:left;margin:10px 10px 0 0;height:24px}
+.al_pinterest{width:64px}
+.al_linkedin{}
+.al_gplus{}
+.al_twitter{}
+.al_like{}
+.al_fbshare{}
+.al_fbshare a{padding: 0 5px 3px 5px !important;font-size:11px;line-height:11px;display: inline-block;background: #eceef5;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;border: 1px solid #cad4e7;cursor: pointer;padding: 2px 6px 4px;white-space: nowrap;color: #3b5998;}
+.al_fbshare a:hover{text-decoration:none;border-color:#9dacce}
+.al_fbshare_dark a{background:#c7c7c7;border-color:#999}
+.al_fbshare_dark a:hover{background:#d9d9d9;border-color:#ddd}
+.al_fbshare_icon{margin-right: 2px;overflow: hidden;background-position: -0px -0px;background-image: url("../images/facebook.png");background-repeat: no-repeat;display: inline-block;height: 14px;width:14px;position: relative;top: 3px;}
+.al_fbshare_count {font-size:11px;font-family:'lucida grande',tahoma,verdana,arial,sans-serif;background: #fff;border: 1px solid #c1c1c1;height: 14px;line-height: 14px;margin-left: 6px;min-width: 15px;padding: 1px 2px;text-align: center;white-space: nowrap;display: inline-block;}

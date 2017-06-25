@@ -1,0 +1,106 @@
+// IE8
+// -----------------
+.ie8 {
+  // Main navigation
+  .separator {
+    .fa {
+      color: @gray-dark;
+    }
+
+    &:hover .fa {
+      color: @white !important;
+    }
+  }
+
+  .t3-mainbody {
+    border: 1px solid #ddd;
+    border-bottom: none;
+  }
+	
+	.t3-copyright {
+    border-top: 3px double #555;
+	}
+
+  &.layout-media .t3-mainbody {
+    border: 1px solid #1e1e1e;
+  }
+
+  // What news
+	// ---------
+	.magazine-links {
+    border: 1px solid #e5e5e5;
+
+    .item,
+    .link-item {
+      border: 0;
+
+      .col-content {
+        background: @white;
+      }
+    }
+  }
+	
+	.t3-sidebar .magazine-links {
+    border: none;
+  }
+	
+	// Line head
+	.line-head {
+		&:before {
+			left: -25px;
+		}
+		&:after {
+			right: -25px;
+		}
+	}
+
+  // Disable Reading mode on IE8
+  // ---------------------------
+  .toggle-reading {
+    display: none;
+  }
+
+  // Fix bug sidebar
+  .blog {
+    .t3-content,
+    .t3-sidebar {
+      display: inline-block!important;
+      float: left !important;
+    }
+  }
+
+  .equal-height > .col {
+    display: inline-block!important;
+    float: left !important;
+    min-height: 250px;
+  }
+
+  .video-sidebar .equal-height > .col {
+    min-height: 50px !important;
+    width: auto;
+  }
+  
+  .acymailing_moduleacy-email-footer {
+    .acymailing_form {
+      .acysubbuttons input {
+        margin-top: 20px;
+        padding-right: 10px;
+        background-color: @red;
+      }
+    }
+  }
+
+  // Fix bug profile user
+  #jform_profile_dob_spacer-lbl {
+    padding-right: @global-margin / 5;
+  }
+}
+
+.ie8,
+.ie9,
+.ie10 {
+  .acymailing_moduleacy-email {
+    border: 5px solid @black;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,150 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+.gallery-list {
+
+  .magazine-categories {
+    padding: 0;
+
+    // Section heading
+    .videos-section-heading {
+      background: lighten(@black, 7%);
+      border: 1px solid @gray-darker;
+      color: @white;
+    }
+  }
+
+  .row-articles {
+    border-color: @gray-darker;
+  }
+
+  .videos-item {
+    border-color: @gray-darker;
+    display: block !important;
+    float: left;
+    padding: @global-padding;
+    position: relative;
+
+    // Video media
+    .videos-item-media {
+      // Mask
+      .video-mask {
+        #gradient > .vertical(rgba(0, 0, 0, 0); rgba(0, 0, 0, 0.65); 0%; 100%);
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 5;
+        .transition( background 0.35s);
+      }
+
+      //Detail
+      .btn-play {
+        display: block;
+        height: @global-padding * 2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -@global-padding 0 0 -@global-padding;
+        width: @global-padding * 2;
+        font-size: @font-size-base * 3.5;
+        color: @white;
+        text-indent: center;
+        line-height: 32px;
+        z-index: 10;
+        .transition(opacity 0.35s);
+        .opacity(0.4);
+
+        &:hover, &:focus, &:active {
+          cursor: pointer;
+          .opacity(1);
+        }
+      }
+
+      &:hover {
+        .btn-play {
+          .opacity(1);
+        }
+      }
+
+      .item-image {
+        max-height: @line-height-computed * 8;
+
+        // Playing
+        // -------
+        &.video-playing {
+          .video-mask:before {
+            background: @red;
+            content: "Playing...";
+            color: @white;
+            display: block;
+            font-size: @font-size-small - 2;
+            line-height: 1;
+            padding: 3px 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    // Video item content
+    .videos-item-main {
+      .article-title {
+        color: @gray;
+
+        h3 {
+          font-family: sans-serif;
+          font-size: @font-size-base;
+          a {
+            &:hover, &:focus, &:active {
+              color: @white;
+            }
+          }          
+        }        
+      }
+    }
+
+  }
+
+  // Loadmore button
+  // ---------------
+  .load-more {
+    border: 1px solid @gray-darker;
+    padding: 0;
+
+    .btn {
+      background: transparent;
+      border: 0;
+      color: @gray-light;
+      padding: (@global-padding / 2) 0;
+      text-align: center;
+      outline: none;
+      width: 100%;
+      .transition(background 0.35);
+      &:hover {
+        background: @gray-darker;
+        color: @white;
+      }
+      &:disabled {
+        color: @gray-dark;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params">
+		<fieldset name="basic">
+			<field
+				name="show_typo_tools"
+				type="radio"
+				class="btn-group"
+				label="TPL_TELINE_V_SHOW_TYPO_TOOLS_LABEL"
+				description="TPL_TELINE_V_SHOW_TYPO_TOOLS_LABEL">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+			</field>
+			<field
+				name="show_sharing_tools"
+				type="radio"
+				class="btn-group"
+				label="TPL_TELINE_V_SHOW_SHARING_TOOLS_LABEL"
+				description="TPL_TELINE_V_SHOW_SHARING_TOOLS_LABEL">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+			</field>
+    </fieldset>
+  </fields>
+</form>

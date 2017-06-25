@@ -1,0 +1,59 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+.events-list {
+  background: @white;
+
+  .magazine-section-heading {
+    border-bottom: 1px solid @border-color;
+  }
+
+  .magazine-categories {
+    padding: 0;
+  }
+
+  .magazine-item {
+    padding-top: @global-padding;
+    padding-bottom: @global-padding;
+  }
+
+  // Short information
+  // -----------------
+  .event-info {
+    ul {
+      list-style: none;
+      margin: (@global-margin / 2) 0 0;
+      padding: 0;
+
+      li {
+        border-bottom: 1px dotted @border-color;
+        color: @gray;
+        font-size: @font-size-small;
+        padding: (@global-padding / 4) 0;
+
+        &:last-child {
+          border: 0;
+          padding-bottom: 0;
+        }
+      }
+
+      .fa {
+        color: @gray-light;
+        display: inline-block;
+        font-weight: @font-weight-semibold;
+        margin-right: (@global-margin / 4);
+      }
+    }
+
+  }
+}

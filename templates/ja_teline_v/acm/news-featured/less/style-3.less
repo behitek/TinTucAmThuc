@@ -1,0 +1,134 @@
+.magazine-featured.style-3 {
+
+  //
+  // Common Styles
+  // --------------------------------
+
+  // Reset
+  .magazine-featured-leading,
+  .magazine-featured-intro,
+  .magazine-item,
+  .row-articles {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+
+
+  // Media
+  // -----
+  .magazine-item-media {
+    // Item mask
+    .media-mask {
+      #gradient > .vertical(rgba(0, 0, 0, 0); rgba(0, 0, 0, 0.65); 0%; 100%);
+      display: block;
+      height: 80%;
+      left: 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      .transition( background 0.35s);
+    }
+    &:hover {
+      .media-mask {
+        height: 60%;
+      }
+    }
+    // Image
+    .item-image {
+      height: @global-padding * 20;
+      max-height: @global-padding * 20;
+      margin: 0;
+    }
+  }
+
+  // Category Name
+  .category-name {
+    bottom: auto;
+    left: @global-padding;
+    top: @global-padding * 3;
+    a {
+      padding: 5px 10px;
+    }
+  }
+
+  // Title
+  .magazine-item-main .article-title {
+    h3 {
+      padding: 0;
+      margin: 0;
+      font-size: @font-size-large;
+      a {
+        color: @white;
+        color: rgba(255,255,255,.9);
+        text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+        &:hover, &:focus, &:active {
+          color: @white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  // Main Content
+  .magazine-item-main {
+    bottom: @global-padding;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 0 @global-padding @global-padding;
+  }
+
+
+  //
+  // Item leading
+  // --------------------------------
+  .magazine-featured-leading {
+    .article-title {
+      h3 {
+        font-size: @font-size-h2;
+        text-shadow: 3px 3px 6px rgba(0,0,0,.5);
+      }
+    }
+  }
+
+
+  //
+  // Item intro
+  // --------------------------------
+  .magazine-featured-intro {
+    background: @white;
+
+    .magazine-item-media {
+      .item-image {
+        height: @global-padding * 10;
+        max-height: @global-padding * 10;
+
+        img {
+          height: @global-padding * 10;
+          width: auto;
+        }
+      }
+    }
+
+    .category-name {
+      bottom: auto;
+      top: @global-padding;
+      left: @global-padding;
+    }
+
+    .magazine-item-main {
+      bottom: 0;
+    }
+
+    .article-title {
+      margin: 0;
+      padding: 0;
+      h3 {
+      }
+    }
+
+  }
+
+}

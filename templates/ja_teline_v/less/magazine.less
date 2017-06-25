@@ -1,0 +1,530 @@
+/**
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org
+ *------------------------------------------------------------------------------
+ */
+
+
+// VARIABLES & MIXINS
+// ------------------
+//@import "vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+// ---------------------------------------------------------
+// MAGAZINE LAYOUT
+// ---------------------------------------------------------
+
+// Clearfix
+// ----------------------------
+.magazine-item,
+.magazine-featured-leading,
+.magazine-featured-intro,
+.magazine-category,
+.row-articles {
+  .clearfix();
+}
+
+
+//
+// GENERIC MAGAZINE ELEMENTS
+// --------------------------------------------------------
+
+// Basic Grid
+// ---------------------------
+.row-articles {
+  border-bottom: 1px dotted @border-color;
+
+  &:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .magazine-item {
+    border-right: 1px dotted @border-color;
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+}
+
+
+// Page Sub Header
+// ----------------------------
+.magazine .page-subheader {
+  h2 {
+    font-size: @font-size-h1;
+  }
+}
+
+
+// Section Heading
+// ----------------------------
+.magazine-section-heading {
+  font-family: @font-family-alt;
+  padding: (@global-padding / 2) (@grid-gutter-width / 2);
+
+  h4 {
+    font-family: @font-family-alt;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: @font-size-h4;
+    letter-spacing: 1px;
+    min-height: 25px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+// Tools
+.magazine-section-tools {
+  float: right;
+  label {
+    display: none;
+  }
+  .btn {
+    display: block;
+    float: left;
+    background: transparent;
+    border: 1px solid @gray-light;
+    border-radius: 0;
+    color: @text-color;
+    font-size: @font-size-small;
+    padding: 6px 12px;
+    line-height: normal;
+    box-shadow: none;
+    .fa {
+      margin-right: 5px;
+    }
+    &:hover {
+      background: @gray-light-lv4;
+      box-shadow: none;
+    }
+    &.active {
+      background: @brand-primary;
+      border-color: @brand-primary;
+      color: #fff;
+    }
+  }
+
+  // Hide on Small Screen
+  @media (max-width: @grid-float-breakpoint) {
+    display: none;
+  }
+}
+ 
+
+// Category Title
+// ----------------------------
+.magazine-category-title {
+  border: 1px solid @border-color;
+  border-right: 0;
+  background: url(../images/bg-stripes.png) repeat left top @gray-light-max;
+
+  h2 {
+    font-size: @font-size-large;
+    font-family: @font-family-alt;
+    line-height: normal;
+    padding: (@global-padding / 2) (@grid-gutter-width/2);
+    margin: 0;
+    display: inline-block;
+    font-weight: @font-weight-normal;
+    letter-spacing: 1px;
+
+    > a {
+      display: block;
+      text-transform: uppercase;
+      background: url(../images/arrow-section.gif) no-repeat right center @gray-dark-max;
+      color: #fff;
+      padding: (@global-padding / 4) @global-padding (@global-padding / 4) (@global-padding / 2);
+
+      // Link states
+      &:hover, &:active, &:focus {
+        text-decoration: none;
+        background-color: @brand-primary;
+      }
+    }
+  }
+
+  // Category Colors
+  // ---------------
+  &.cat-red {
+    a {
+      background-color: @red;
+      &:hover, &:focus, &:active {
+        background-color: @red;
+      }
+    }
+  }
+
+  &.cat-blue {
+    a {
+      background-color: @blue;
+      &:hover, &:focus, &:active {
+        background-color: @blue;
+      }
+    }
+  }
+
+  &.cat-green {
+    a {
+      background-color: @green;
+      &:hover, &:focus, &:active {
+        background-color: @green;
+      }
+    }
+  }
+
+  &.cat-violet {
+    a {
+      background-color: @violet;
+      &:hover, &:focus, &:active {
+        background-color: @violet;
+      }
+    }
+  }
+
+  &.cat-orange {
+    a {
+      background-color: @orange;  
+      &:hover, &:focus, &:active {
+        background-color: @orange;
+      }
+    }
+  }
+
+  &.cat-cyan {
+    a {
+      background-color: @cyan; 
+      &:hover, &:focus, &:active {
+        background-color: @cyan;
+      }
+    }
+  }
+
+  &.cat-purple {
+    a {
+      background-color: @purple;
+      &:hover, &:focus, &:active {
+        background-color: @purple;
+      }
+    }
+  }
+
+  &.cat-yellow {
+    a {
+      background-color: @yellow;
+      &:hover, &:focus, &:active {
+        background-color: @yellow;
+      }
+    }
+  }
+
+  &.cat-pink {
+    a {
+      background-color: @pink;
+      &:hover, &:focus, &:active {
+        background-color: @pink;
+      }
+    }
+  }
+
+}
+
+
+// Titles
+// ----------------------------
+.magazine-item .article-title {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+  h3 {
+    margin: 0;
+    font-size: @font-size-large;
+  }
+  a {
+    color: @headings-color;
+    // Link states
+    &:hover, &:active, &:focus {
+      color: @brand-primary;
+      text-decoration: none;
+    }
+  }
+}
+
+
+// Media
+// ----------------------------
+.magazine-item-media {
+  position: relative;
+}
+
+.magazine-featured,
+.magazine-categories {
+  .item-image {
+    overflow: hidden;
+    max-height: @line-height-computed * 5;
+  }
+
+   > .col {
+    @media screen and (max-width: @screen-xs-max) {
+      min-height: 0 !important;
+    }
+   }
+
+  .item-image,
+  .pull-left.item-image,
+  .pull-right.item-image {
+    width: 100%;
+    max-width: 100%;
+    float: none !important;
+    margin: 0 0 @global-margin 0;
+  }
+
+  .item-image img,
+  .pull-left.item-image img,
+  .pull-right.item-image img,
+  .img_caption {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+}
+
+
+// Metadata
+// ----------------------------
+.magazine-item .article-aside {
+  margin-top: @global-margin / 4;
+  margin-bottom: 0;
+}
+
+.magazine-item .article-info {
+  color: @gray-light;
+  margin: 0;
+  width: 100%;
+}
+
+// Category Name
+.category-name {
+  display: inline-block;
+  a {
+    &:hover, &:focus, &:active {
+    }
+  }
+
+  .magazine-item-media & {
+    margin-bottom: @t3-global-margin/2;
+    position: inherit;
+  }
+}
+
+.magazine-item-media .item-image + .category-name {
+  position: absolute;
+  left: 0;
+  bottom: -(@global-padding/2);
+  margin: 0;
+}
+
+.magazine-featured-leading .magazine-item-media {
+  .category-name {
+    margin: @t3-global-margin*2.5 0 @t3-global-margin/2 0;
+  }
+  
+  .item-image + .category-name {
+    margin: 0;
+  }
+}
+
+.article-intro-media {
+  .category-name {
+    position: inherit;
+  }
+
+  .item-image + .category-name {
+    position: absolute;
+  }
+}
+
+
+// Content
+// ----------------------------
+.magazine-item-main {
+	
+	.content_rating {
+		height: 15px;
+		margin-bottom: @t3-global-margin/2;
+	}
+	
+	.content_vote {
+		display: block;
+		margin-bottom: @t3-global-margin;
+	}
+}
+
+.magazine-item-ct {
+  margin-top: @line-height-computed / 2;
+  font-weight: @font-weight-light;
+  font-size: @font-size-small;
+  max-height: (@line-height-computed * @font-size-small / @font-size-base) * 3; //Max 3 lines with small font-size;
+  overflow: hidden;
+  text-overflow: clip;
+  p:last-child {
+    margin-bottom: 0;
+  }
+  .list-view & {
+    max-height: @line-height-computed * 4; //Max 4 lines with base font-size;
+  }
+}
+
+
+// Leading Items
+// ----------------------------
+.magazine-leading {
+
+  // Images
+  .item-image {
+    float: none !important;
+    width: 100%;
+  }
+
+  // Main Content
+  .magazine-item-main {
+    // Titles
+    .article-title h3 {
+      font-size: @font-size-larger;
+    }
+    // Intro Text
+    .magazine-item-ct {
+      font-size: @font-size-base;
+      max-height: @line-height-computed * 4; //Max 4 lines with base font-size;
+    }
+  }
+
+}
+
+
+
+// Intro Items
+// ----------------------------
+.magazine-intro {
+
+  .magazine-item {
+    padding-top: @global-padding;
+    padding-bottom: @global-padding;
+  }
+
+  // Main Content
+  .magazine-item-main {
+    // Titles
+    .article-title h3 {
+    }
+    // Intro Text
+    .magazine-item-ct {
+      font-size: @font-size-small;
+    }
+  }
+
+}
+
+
+// Links Item
+// ----------------------------
+.magazine-links {
+}
+
+.link-item {
+  border-bottom: 1px dotted @border-color;
+  padding: (@global-padding / 2) @global-padding;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  .col-media {
+    .make-xs-column (2);
+    padding: 0;
+  }
+
+  .col-content {
+    .make-xs-column (10);
+    padding-right: 0;
+  }
+
+  // Title
+  .article-title {
+    margin: 0;
+    h3 {
+      font-size: @font-size-base;
+      margin: 0;
+    }
+  }
+
+  // Media
+  .item-image {
+    float: none !important;
+    margin: 0 !important;
+    max-height: @line-height-computed * 2;
+    overflow: hidden;
+  }
+
+  // Metadata
+  .article-aside {
+    margin-bottom: @line-height-computed / 4;
+    margin-top: 0;
+    .fa {
+      display: none;
+    }
+    dd {
+      margin-right: 2px;
+    }
+    .category-name {
+      display: inline-block;
+      margin-right: 5px;
+    }
+    .article-info {
+      display: inline-block;
+      width: auto;
+    }
+  }
+}
+
+
+// MISC
+// ----------------------------
+.magazine-list .t3-sidebar {
+  background: #fff;
+}
+
+// Loadmore button
+// ---------------
+.load-more {
+  padding: 0 @global-padding @global-padding;
+
+  .btn {
+    background: @gray-lighter;
+    border: 0;
+    color: @gray;
+    font-family: sans-serif;
+    font-weight: @font-weight-bold;
+    padding: (@global-padding / 2) 0;
+    text-align: center;
+    outline: none;
+    width: 100%;
+    .transition(background 0.35);
+    &:hover {
+      background: @brand-event;
+      color: @white;
+    }
+    &:disabled {
+      color: rgba(255,255,255,0.5);
+    }
+  }
+}

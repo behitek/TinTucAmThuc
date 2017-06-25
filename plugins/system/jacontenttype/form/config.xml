@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+		<fieldset name="shared">
+				<field name="jact_img_enabled" type="radio" class="btn-group btn-group-yesno" default="0" label="PLG_JACONTENT_TYPE_IMAGE_ENABLED_LABEL" description="PLG_JACONTENT_TYPE_IMAGE_ENABLED_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="jact_img_dir" type="text" default="media/jact" label="PLG_JACONTENT_TYPE_IMAGE_DIR_LABEL" description="PLG_JACONTENT_TYPE_IMAGE_DIR_DESC" />
+				<field name="jact_img_big_width" type="text" default="500" label="PLG_JACONTENT_TYPE_IMAGE_BIG_WIDTH_LABEL" description="PLG_JACONTENT_TYPE_IMAGE_BIG_WIDTH_DESC" />
+				<field name="jact_img_big_height" type="text" default="500" label="PLG_JACONTENT_TYPE_IMAGE_BIG_HEIGHT_LABEL" description="PLG_JACONTENT_TYPE_IMAGE_BIG_HEIGHT_DESC" />
+				<field name="jact_img_medium_width" type="text" default="300" label="PLG_JACONTENT_TYPE_IMAGE_MEDIUM_WIDTH_LABEL" description="PLG_JACONTENT_TYPE_IMAGE_MEDIUM_WIDTH_DESC" />
+				<field name="jact_img_medium_height" type="text" default="300" label="PLG_JACONTENT_TYPE_IMAGE_MEDIUM_HEIGHT_LABEL" description="PLG_JACONTENT_TYPE_IMAGE_MEDIUM_HEIGHT_DESC" />
+				<field name="jact_img_small_width" type="text" default="100" label="PLG_JACONTENT_TYPE_IMAGE_SMALL_WIDTH_LABEL" description="PLG_JACONTENT_TYPE_IMAGE_SMALL_WIDTH_DESC" />
+				<field name="jact_img_small_height" type="text" default="100" label="PLG_JACONTENT_TYPE_IMAGE_SMALL_HEIGHT_LABEL" description="PLG_JACONTENT_TYPE_IMAGE_SMALL_HEIGHT_DESC" />
+		</fieldset>
+</form>

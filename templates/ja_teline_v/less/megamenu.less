@@ -1,0 +1,478 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+
+// VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Include Variables and Mixins
+
+
+// EXTEND STYLE IN BASE
+// --------------------
+@import "../../../plugins/system/t3/base-bs3/less/megamenu.less";
+
+
+//
+// BASIC STYLE FOR MEGAMENU
+// -------------------------
+.t3-megamenu {
+
+  // THE MEGAMENU
+  //--------------------------------------------
+
+  // Global Menu Inner padding
+  // -------------------------
+  .mega-inner {
+    padding: 10px 0;
+  }
+
+  // Inner Padding for 1 column
+  .col-lg-12 .mega-inner,
+  .col-md-12 .mega-inner,
+  .col-sm-12 .mega-inner,
+  .col-xs-12 .mega-inner {
+    padding: 0;
+  }
+
+  // Menu Grids
+  // ----------
+  .row {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .row + .row  {
+    padding-top: @global-padding / 2;
+    border-top: 1px solid @hr-border;
+  }
+
+
+  // The Dropdown
+  // ------------
+  .mega-dropdown-menu {
+    padding: 0;
+    margin-left: -1px !important;
+    box-shadow: 4px 4px 0 0 rgba(0,0,0,.1);
+    position: absolute;
+
+    html[dir=rtl] & {
+      margin-left: 0px !important;
+      .box-shadow(-4px 0 0 4px rgba(0,0,0,.1));
+    }
+  }
+
+
+  // Dropdown Sub Menus
+  // ------------------
+  .dropdown-submenu {
+  }
+
+  // The Group
+  // ---------
+  .mega-group {
+  }
+
+  // Group Title
+  // We use BS3 "dropdown-header"
+  //.mega-nav .mega-group > .mega-group-title,
+  //.dropdown-menu .mega-nav .mega-group > .mega-group-title,
+  //.dropdown-menu .active .mega-nav .mega-group > .mega-group-title
+  .dropdown-header,
+  .mega-nav .mega-group > .dropdown-header,
+  .dropdown-menu .mega-nav .mega-group > .dropdown-header,
+  .dropdown-menu .active .mega-nav .mega-group > .dropdown-header {
+    margin: 0;
+    padding: 0;
+    background: @module-title-bg;
+    color: @module-title-color;
+    font-size: @font-size-large;
+    line-height: normal;
+    // Link states
+    &:hover, &:active, &:focus {
+      background: inherit;
+      color: inherit;
+    }
+  }
+
+  // Group Content
+  .mega-group-ct {
+    .row {
+      margin-left: -(@grid-gutter-width / 2);
+      margin-right: -(@grid-gutter-width / 2);
+    }
+  }
+
+
+  // Nav in Megamenu
+  // ---------------
+  .mega-col-nav {
+    padding: 0;
+  }
+
+  // Inner padding
+  .mega-col-nav .mega-inner {
+  }
+
+  // Inner padding for nav in 1 column
+  .col-lg-12.mega-col-nav .mega-inner,
+  .col-md-12.mega-col-nav .mega-inner,
+  .col-sm-12.mega-col-nav .mega-inner,
+  .col-xs-12.mega-col-nav .mega-inner {
+  }
+
+  .mega-group .col-lg-12.mega-col-nav .mega-inner,
+  .mega-group .col-md-12.mega-col-nav .mega-inner,
+  .mega-group .col-sm-12.mega-col-nav .mega-inner,
+  .mega-group .col-xs-12.mega-col-nav .mega-inner {
+  }
+
+  // The Nav
+  .mega-nav,
+  .dropdown-menu .mega-nav {
+  }
+
+  .mega-nav > li,
+  .dropdown-menu .mega-nav > li {
+    border-bottom: 1px solid @border-color;
+  }
+
+  .mega-nav > li a,
+  .dropdown-menu .mega-nav > li a {
+    color: @text-color;
+    padding: (@global-padding / 2) @global-padding;
+  }
+
+  .mega-nav > li.active > a,
+  .dropdown-menu .mega-nav > li.active > a {
+    color: @brand-primary;
+  }
+
+  .dropdown-menu .mega-nav > li .separator {
+  }
+
+  // Nav in Group
+  .mega-group > .mega-nav,
+  .dropdown-menu .mega-group > .mega-nav {
+  }
+
+  .mega-group > .mega-nav > li,
+  .dropdown-menu .mega-group > .mega-nav > li {
+  }
+
+  .mega-group .mega-nav > li a,
+  .dropdown-menu .mega-group .mega-nav > li a {
+  }
+
+  .dropdown-menu .mega-group .mega-nav > li.active > a {
+    color: @gray-dark;
+  }
+
+  // The caret
+  .mega-nav .dropdown-submenu > a::after {
+    margin-right: 0;
+  }
+
+
+  // Modules in Megamenu
+  // -------------------
+  .mega-col-module {
+    height: 100%;
+  }
+
+  // Inner padding
+  .mega-col-module .mega-inner {
+    height: 100%;
+  }
+
+  .mega-col-module .mega-inner ul li {
+    list-style-type: none;
+  }
+
+  // The module
+  .t3-module {
+    margin-bottom: 0;
+  }
+
+  // Module Title
+  .t3-module .module-title,
+  .t3-module .module-title:hover {
+    font-size: @font-size-base;
+    font-weight: @font-weight-normal;
+    padding: (@global-padding / 4) (@global-padding / 2);
+    margin: 0 0 (@global-padding / 2);
+    background: @gray-dark-max;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+
+  // Module Content
+  .t3-module .module-ct {
+  }
+
+  // List in Module
+  // Reset List Style in Module
+  .t3-module ul,
+  .t3-module .nav {
+  }
+
+  .t3-module ul li,
+  .t3-module .nav li {
+    list-style: disc;
+    display: list-item;
+    float: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .t3-module ul li a,
+  .t3-module .nav li a {
+    // Link states
+    &:hover, &:focus, &:active {
+    }
+  }
+  
+  // Nav in Module
+  .dropdown-menu .t3-module .nav {
+  }
+
+  .dropdown-menu .t3-module .nav li {
+  }
+
+  .dropdown-menu .t3-module .t3-module li a {
+    // Link states
+    &:hover, &:focus, &:active {
+    }
+  }
+  
+
+  // The caption
+  // -----------
+  .mega-caption {
+    color: @gray-light;
+    color: rgba(155,155,155,.5);
+    font-size: @font-size-small;
+    font-family: @font-family-sans-serif;
+    margin-top: 3px;
+    font-weight: normal;
+    line-height: normal;
+    text-transform: none;
+  }
+
+
+  // The caret
+  // ---------
+  .nav .caret,
+  .dropdown-submenu .caret,
+  .mega-menu .caret {
+    display: none;
+  }
+
+  // Show the caret on level 0 only
+  .nav > .dropdown > .dropdown-toggle .caret {
+    position: absolute;
+    right: -4px;
+    bottom: -1px;
+    border-top-color: @border-color;
+    border-bottom-color: @border-color;
+  }
+
+
+  // The icon
+  // --------
+  .nav [class^="icon-"],
+  .nav [class*=" icon-"],
+  .nav .fa {
+  }
+
+  // Reset the margin on Input Group Addon
+  .nav .input-group-addon [class^="icon-"],
+  .nav .input-group-addon [class*=" icon-"],
+  .nav .input-group-addon .fa {
+    margin-right: 0;
+  }
+
+
+  //
+  // Custom Styles
+  // --------------
+
+  // Make the comlumns has equal-height
+  @media screen and (min-width: @screen-lg) {
+    .mega-dropdown-inner {
+      .mega-left,
+      .mega-right {
+        display: table-cell !important;
+        vertical-align: top !important;
+        float: none !important;
+      }
+    }
+  }
+
+  .mega-left {
+    border-right: 1px solid @border-color;
+    background: @gray-light-lv5;
+    padding: @global-padding (@global-padding / 2);
+  }
+
+  .mega-right {
+    background: @gray-light-lv5;
+    padding: @global-padding (@global-padding / 2);
+  }
+
+
+  // Color Themes
+  // ------------
+  .cat-red {
+
+    border-color: @red !important;
+    background-color: @white;
+
+    .module-title,
+    .module-title:hover {
+      background: @red;
+      color: #fff;
+    }
+		
+		.item-list .item .item-inner .item-title a:hover, 
+		.item-list .item .item-inner .item-title a:active, 
+		.item-list .item .item-inner .item-title a:focus {
+			color: @red;
+		}
+
+    .article-title h3 a:hover,
+    .article-title h3 a:focus,
+    .article-title h3 a:active {
+      color: @red; 
+    }
+
+  }
+
+  .cat-blue {
+    border-color: @blue !important;
+    background-color: @white;
+
+    .module-title,
+    .module-title:hover {
+      background: @blue;
+      color: #fff;
+    }
+		
+		.item-list .item .item-inner .item-title a:hover, 
+		.item-list .item .item-inner .item-title a:active, 
+		.item-list .item .item-inner .item-title a:focus {
+			color: @blue;
+		}
+
+    .article-title h3 a:hover,
+    .article-title h3 a:focus,
+    .article-title h3 a:active {
+      color: @blue; 
+    }
+  }
+
+	.cat-green {
+		border-color: @green !important;
+		background-color: @white;
+
+		.module-title,
+		.module-title:hover {
+			background: @green;
+			color: #fff;
+		}
+		
+		.item-list .item .item-inner .item-title a:hover, 
+		.item-list .item .item-inner .item-title a:active, 
+		.item-list .item .item-inner .item-title a:focus {
+			color: @green;
+		}
+
+    .article-title h3 a:hover,
+    .article-title h3 a:focus,
+    .article-title h3 a:active {
+      color: @green;
+    }
+	}
+
+  .cat-cyan {
+    border-color: @cyan !important;
+    background-color: @white;
+
+    .module-title,
+    .module-title:hover {
+      background: @cyan;
+      color: #fff;
+    }
+		
+		.item-list .item .item-inner .item-title a:hover, 
+		.item-list .item .item-inner .item-title a:active, 
+		.item-list .item .item-inner .item-title a:focus {
+			color: @cyan;
+		}
+
+    .article-title h3 a:hover,
+    .article-title h3 a:focus,
+    .article-title h3 a:active {
+      color: @cyan;
+    }
+  }
+
+  .cat-orange {
+    border-color: @orange !important;
+    background-color: @white;
+
+    .module-title,
+    .module-title:hover {
+      background: @orange;
+      color: #fff;
+    }
+		
+		.item-list .item .item-inner .item-title a:hover, 
+		.item-list .item .item-inner .item-title a:active, 
+		.item-list .item .item-inner .item-title a:focus {
+			color: @orange;
+		}
+
+    .article-title h3 a:hover,
+    .article-title h3 a:focus,
+    .article-title h3 a:active {
+      color: @orange;
+    }
+  }
+
+  .cat-violet {
+    border-color: @violet !important;
+    background-color: @white;
+
+    .module-title,
+    .module-title:hover {
+      background: @violet;
+      color: #fff;
+    }
+		
+		.item-list .item .item-inner .item-title a:hover, 
+		.item-list .item .item-inner .item-title a:active, 
+		.item-list .item .item-inner .item-title a:focus {
+			color: @violet;
+		}
+
+    .article-title h3 a:hover,
+    .article-title h3 a:focus,
+    .article-title h3 a:active {
+      color: @violet;
+    }
+  }
+
+  // End
+}
+

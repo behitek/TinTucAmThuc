@@ -1,0 +1,246 @@
+.magazine-featured.events-featured {
+
+  //
+  // Common Styles
+  // --------------------------------
+  background: @white;
+
+  // Reset
+  .magazine-featured-leading,
+  .magazine-featured-intro,
+  .magazine-item,
+  .row-articles {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+
+
+  .magazine-section-heading {
+    background: @brand-event;
+    color: #fff;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    h4 {
+      color: #fff;
+      font-weight: @font-weight-normal;
+      font-size: @font-size-base;
+    }
+  }
+
+  .magazine-item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  // Media
+  // -----
+  .magazine-item-media {
+    padding-left: 0;
+
+    // Mask
+    .media-mask {
+      display: none;
+    }
+
+    // Image
+    .item-image {
+      max-height: @line-height-computed * 20;
+      margin: 0;
+
+      img {
+        max-width: none;
+        @media screen and (max-width: @grid-float-breakpoint) {
+          width: auto !important;
+        }
+      }
+    }
+  }
+
+  // Category Name
+  .category-name {
+    bottom: auto;
+    left: @global-padding;
+    top: @global-padding * 3;
+    a {
+      padding: 5px 10px;
+    }
+  }
+
+  // Title
+  .article-title {
+  }
+
+  // Main Content
+  .magazine-leading {
+    .magazine-item-main {
+      background: rgba(0,119,187, 0.9);
+      position: absolute;
+      top: @global-padding * 3;
+      right: 0;
+      padding: @global-padding;
+      @media screen and (min-width: @screen-sm) {
+        width: 50%;
+      }
+
+      @media screen and (min-width: @screen-md) {
+        width: 33.3%;
+      }
+
+      &:after {
+        background: rgba(0,0,0,0.5);
+        content: "";
+        display: block;
+        height: 5px;
+        width: 100%;
+        position: absolute;
+        bottom: -5px;
+        left: 5px;
+      }
+    }
+  }
+
+
+  //
+  // Item leading
+  // --------------------------------
+  .magazine-featured-leading {
+    .article-title {
+      h3 {
+        font-size: @font-size-h4;
+        @media screen and (min-width: @screen-sm) {
+          font-size: @font-size-h2;
+        }
+        
+        a {
+          color: @white;
+        }
+      }
+    }
+
+    .event-info {
+      background: @white;
+      border-top: 1px solid @border-color;
+      margin: @global-margin -@global-padding -@global-padding;
+      padding: (@global-padding / 2) @global-padding @global-padding;
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          border-bottom: 1px dotted lighten(@gray-light, 15%);
+          padding: (@global-padding / 3) 0 (@global-padding / 4) 20px;
+          position: relative;
+
+          &:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      .fa {
+        color: @gray-light;
+        display: inline-block;
+        margin-right: 5px;
+        min-width: 80px;
+        position: absolute;
+        top: 12px;
+        left: 0;
+      }
+    }
+  }
+
+  // Featured Leading Carousel
+  // ----------------------------
+  .magazine-carousel {
+
+    .carousel-inner {
+    }
+
+    // Item Image
+    .magazine-item-media .item-image {
+      height: @line-height-computed * 20;
+      background: @gray-lighter;
+
+      @media (max-width: @screen-md-max) {
+        height: auto;
+      }
+    }
+
+    // Fix height for content
+    .magazine-item-main {
+      min-height: @line-height-computed * 11;
+
+      @media (max-width: @screen-md-max) {
+        bottom: @line-height-computed;
+        left: @line-height-computed;
+        min-height: 0;
+        right: @line-height-computed;
+        width: auto;
+        top: auto;
+      }
+    }
+
+    // Numbers
+    .carousel-number {
+      height: 24px;
+      line-height: 24px;
+      font-size: @font-size-small;
+      color: @gray-light;
+      color: rgba(255,255,255,.2);
+      font-family: @font-family-serif;
+      strong {
+        font-family: @font-family-sans-serif;
+        color: rgba(255,255,255,.7);
+      }
+    }
+
+    // Controls
+    .carousel-control-btns {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: (@global-padding / 2) @global-padding;
+      z-index: 5;
+
+      .btn {
+        width: 24px;
+        height: 24px;
+        line-height: 22px;
+        margin: 0;
+        padding: 0;
+        font-size: @font-size-small;
+        color: #fff;
+        text-shadow: none;
+        border: 2px solid #fff;
+        text-align: center;
+        border-radius: 2px;
+        .opacity(.3);
+        // Hover/focus state
+        &:hover,
+        &:focus {
+          outline: 0;
+          color: #fff;
+          text-decoration: none;
+          .opacity(.9);
+        }
+      }
+
+    }
+  }
+
+}
+
+// FOR IE8
+.ie8 .magazine-featured.events-featured {
+  .magazine-item-main {
+    background-color: @brand-event;
+  }
+}

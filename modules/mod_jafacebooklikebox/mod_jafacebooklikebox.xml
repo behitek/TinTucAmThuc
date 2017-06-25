@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+
+	<name>JA Facebook Like Box Module</name>
+	<author>JoomlArt.com</author>
+	<creationDate>July 2015</creationDate>
+	<copyright>J.O.O.M Solutions Co., Ltd.</copyright>
+	<license>GNU/GPL V2 for PHP files. Read Terms of Service for details.
+	</license>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>www.joomlart.com</authorUrl>
+	<version>2.6.1</version>
+	<description>
+	 <![CDATA[
+		<div style='text-align: left;'>
+	 	<span style="color: #008000;"><strong>JA Facebook LikeBox Module for Joomla! 2.5 & 3,x</strong></span><br />
+	 	<p><img alt="JA Facebook LikeBox Module" src="http://static.joomlart.com/images/stories/extensions/joomla/jaec_facebook_likebox_plg.png" /></p>
+		<div style='font-weight:normal'>
+	 	JA Facebook LikeBox Module, provides Facebook Page owners to attract and gain Likes from their own website content, it uses the <strong><a href="https://developers.facebook.com/docs/plugins/page-plugin" target="_blank">FaceBook Page Plugin</a></strong> API. 
+	 	<p style="clear:both"><span style="color: #ff6600;"><strong>Features:</strong></span></p>
+	 	<ol><li>Show how many users already like your page, and which of their friends like it too</li>
+		<li>Like the page with one click.</li></ol>
+	 	
+		<p><strong><span style="color: #ff0000;">Upgrade Methods:</span><br /></strong></p>
+		<ol><li>You can install new version directly over this version. Uninstallation is not required. Backup any customized file before upgrading. OR</li><li>Use <strong><a href="http://extensions.joomla.org/extensions/core-enhancements/installers/12077" target="_blank">JA Extensions Manager</a></strong> Component for easy upgrades and rollbacks. <strong><a href="http://www.youtube.com/user/JoomlArt#p/c/BC9B0C0BFE98657E/2/mNAuJRmifG8" target="_blank">Watch Video..</a></strong></li></ol>
+		<p><span style="color: #008000;"><strong>Links:</strong></span></p>
+		<ul><li><a target="_blank" href="http://www.joomlart.com/forums/showthread.php?49870">JA FaceBook LikeBox General Userguide</a></li><li><a target="_blank" href="http://pm.joomlart.com/browse/JAECMODFBLIKEBOXJIVI">Report Bug</a></li><li><a target="_blank" href="http://update.joomlart.com/">Updates &amp; Versions</a></li></ul>
+		<p>Copyright 2004 - 2014 <a href="http://www.joomlart.com/" title="Visit Joomlart.com!">JoomlArt.com</a>.</p>
+		</div>
+		</div>
+	 ]]>
+	</description>
+
+	<files>
+		<folder>tmpl</folder>
+		<folder>asset</folder>
+		<filename>index.html</filename>
+		<filename module="mod_jafacebooklikebox">mod_jafacebooklikebox.php</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">en-GB.mod_jafacebooklikebox.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_jafacebooklikebox/asset/elements">
+				<field name="jafacebookid" 
+					type="text" 
+					default="123144964369587" 
+					label="FACEBOOK_ID"
+					description="DESC_FACEBOOK_ID" />
+				<field name="connections" 
+					type="radio"
+                    class="btn-group" 
+					default="1"
+					label="Show User liked this page"
+					description="SHOW_CONNECTIONS">
+                    
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>    
+                </field>
+				<field name="posts" 
+					type="radio" 
+					class="btn-group"
+					default="1" 
+					label="Show posts"
+					description="DESC_SHOW_POSTS">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="header" 
+					type="radio" 
+					class="btn-group"
+					default="1" 
+					label="Show_Header"
+					description="SHOW_FACEBOOK_HEADER">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field type="spacer" hr="true" />
+				<field name="width" 
+					type="text" 
+					default="300" 
+					label="Width" 
+					filter="integer"
+					description="DESC_WITDH" />
+				<field name="height" 
+					type="text" 
+					default="587" 
+					label="Height" 
+					filter="integer"
+					description="DESC_HEIGHT" />
+                <field name="adapt_width"
+                    type="radio"
+                    class="btn-group"
+                    default="1"
+                    label="ADAPT_CONTAINER_WIDTH"
+                    description="DESC_ADAPT_CONTAINER_WIDTH">
+                    
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>    
+                </field>
+				<!--<field name="colorscheme" 
+					type="list" 
+					default="1" 
+					label="COLOR_SCHEME"
+					description="DESC_COLOR_SCHEME">
+					<option value="1">Light</option>
+					<option value="0">Dark</option>
+				</field>
+				
+				<field name="border_color" 
+					type="list" 
+					default="white" 
+					label="BORDER_COLOR"
+					description="DESC_BORDER_COLOR">
+					<option value="aqua">Aqua</option>
+					<option value="black">Black</option>
+					<option value="blue">Blue</option>
+					<option value="fuchsia">Fuchsia</option>
+					<option value="gray">Gray</option>
+					<option value="green">Green</option>
+					<option value="lime">Lime</option>
+					<option value="maroon">Maroon</option>
+					<option value="navy">Navy</option>
+					<option value="olive">Olive</option>
+					<option value="purple">Purple</option>
+					<option value="red">Red</option>
+					<option value="silver">Silver</option>
+					<option value="teal">Teal</option>
+					<option value="white">White</option>
+					<option value="yellow">Yellow</option>
+				</field>
+				-->
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					filter="integer"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+					
+				<field type="japanel" path="/modules/mod_jafacebooklikebox/asset/elements/" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

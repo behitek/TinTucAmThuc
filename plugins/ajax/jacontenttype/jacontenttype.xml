@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="ajax" method="upgrade">
+	<name>Ajax - JA Content Type</name>
+	<author>JoomlArt</author>
+	<creationDate>15 April 2014</creationDate>
+	<copyright>(C) 2014 Joomlart. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>www.joomlart.com</authorUrl>
+	<version>1.0.0</version>
+	<description>JA Content Type Plugin</description>
+	<files>
+		<filename plugin="jacontenttype">jacontenttype.php</filename>
+		<filename>index.html</filename>
+		<folder>layouts</folder>
+	</files>
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

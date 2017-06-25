@@ -1,0 +1,59 @@
+.magazine-featured.style-2 {
+
+  // Item leading
+  .magazine-featured-leading {
+    position: relative;
+
+    .magazine-item-media {
+      .category-name {
+        bottom: auto;
+        left: 0;
+        top: @global-padding * 3;
+
+        a {
+          font-weight: @font-weight-bold;
+          padding: 5px 10px;
+        }
+      }
+
+      .item-image {
+        margin: 0;
+      }
+    }
+
+    .magazine-item {
+      background: @white;
+      top: (@global-padding * 3) + 25;
+      position: absolute;
+      left: 0;
+      width: 70%;
+
+      .article-title {
+        a {
+          font-weight: @font-weight-normal;
+        }
+      }
+    }
+  }
+
+  // Item intro
+  .magazine-featured-intro {
+       
+    .row-articles {
+
+      .magazine-item {
+        .magazine-item-media {
+          .category-name {
+            bottom: auto;
+            top: @global-padding;
+          }
+        }
+
+        .article-title {
+          margin-right: @global-margin * 2;
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="content_type"
+			type="jactt"
+			label="Content Type"
+			description="Select a Content Type"
+			onchange="this.form.submit();"
+		>
+			<option value="">- Select Content Type -</option>
+			<option value="article">Article</option>
+		</field>
+	</fields>
+</form>

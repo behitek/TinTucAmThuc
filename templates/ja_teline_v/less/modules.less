@@ -1,0 +1,1121 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+
+// --------------------------------------------------
+// MODULE STYLES
+// --------------------------------------------------
+
+// 
+// GENECRIC MODULE
+// --------------------------------------------------
+.t3-module {
+  background: @module-bg;
+  color: @module-color;
+  margin-bottom: @global-padding;
+  padding-bottom: 0;
+
+  // Module padding
+  .module-inner {
+    padding: @module-padding;
+  }
+}
+
+// Module Title
+// ------------
+.module-title {
+  display: inline-block;
+  background: @module-title-bg;
+  color: @module-title-color;
+  font-size: @font-size-large;
+  font-family: @font-family-alt;
+  font-weight: @font-weight-normal;
+  text-transform: uppercase;
+  margin: 0;
+  padding: (@global-padding / 4) (@global-padding / 2);
+  line-height: normal;
+
+}
+
+// Module Content
+// --------------
+.module-ct {
+  background: @module-content-bg;
+  color: @module-content-color;
+  padding: @module-content-padding;
+  .clearfix();
+}
+
+// Module List
+// -----------
+.module-ct,
+.module-ct .custom {
+  > ul,
+  > ol {
+    margin-left: 20px;
+    padding-left: 0;
+  }
+  
+  > ul.unstyled,
+  > ol.unstyled {
+    padding-left: 0;
+  }
+
+  > ul.nav,
+  > ol.nav {
+    padding-left: 0;
+    margin-left: 0;
+  }
+}
+
+
+//
+// MODULE STYLES
+// --------------------------------------------------
+
+// Dark Modules
+// ------------
+.t3-module.mod-dark {
+  background: @gray-darker;
+  margin: -@global-margin -(@grid-gutter-width/2) @global-margin;
+  padding-left: @global-padding;
+  padding-right: @global-padding;
+  padding-top: @global-padding;
+  .custom {
+    padding-top: 0;
+  }
+}
+
+// No Gutter Modules
+// ------------
+.t3-module.no-gutter {
+  margin: -@global-margin -(@grid-gutter-width/2) @global-margin;
+  .custom {
+    padding-top: 0;
+  }
+}
+
+
+//
+// JOOMLA! MODULES
+// --------------------------------------------------
+
+// Menu
+// ----
+.module_menu {
+  .nav {
+  }
+  
+  .nav > li {
+  }
+  
+  .nav > li > a,
+  .nav > li > .separator {
+    padding: @padding-base-vertical 5px;
+    display: block;
+  }
+
+  // Hover state
+  .nav > li > a:hover {
+  }
+  
+  // Active state
+  .nav > li.active > a {
+  }
+}
+
+// Login Form
+// ----------
+#login-form {
+
+  .userdata {
+    padding-top: @t3-global-margin/2;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+  }
+  
+  .btn-primary {
+  }
+  
+  ul.unstyled {
+    margin-top: @line-height-computed;
+    padding-left: 20px;
+  }
+
+  #form-login-username {
+  }
+  
+  #form-login-password {
+  }
+  
+  #form-login-remember {
+    label {
+      display: block;
+      font-weight: normal;
+    }
+  }
+
+}
+
+
+// Advertisement
+// -------------
+.banner {
+  padding: @global-padding 0;
+  text-align: center;
+  .custom {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.bannergroup {
+  display: block;
+  background: @gray-light-max;
+  text-align: center;
+  .clearfix();
+}
+
+.banneritem {
+  margin: 0 0 @global-padding / 2;
+  overflow: hidden;
+  a {
+    font-weight: bold;
+    display: block;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.bannerfooter {
+  font-size: @font-size-smaller;
+  padding: 2px (@global-padding/2);
+  text-align: right;
+  background: @gray-lighter;
+  color: @gray;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+}
+
+
+// Banner in Header
+.header-banner {
+  display: none;
+  margin: 0;
+  @media(min-width: @screen-sm-max) {
+    display: block;
+  }
+
+  .banneritem {
+    margin: 0;
+  }
+}
+
+// Banner in Footer
+.footer-banner {
+  margin: 20px 0 0 0;
+  .banneritem {
+    margin: 0;
+  }
+}
+
+
+// News Feed
+// ----------
+.feed {
+  // Feed Title
+  h4 {
+    font-weight: bold;
+  }
+  // Feed list
+  .newsfeed,
+  ul.newsfeed {
+    border-top: 1px solid @hr-border;
+    li {}
+    .feed-link, 
+    h5.feed-link {
+      font-size: @font-size-base;
+      font-weight: normal;
+      margin: 0;
+    }
+  }
+
+}
+
+// Latest Users 
+// ------------
+.latestusers,
+ul.latestusers {
+  margin-left: 0;
+  li {
+    background: @gray-lighter;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: @border-radius-base;
+  }
+}
+
+
+// Stats 
+// -----
+.stats-module {
+  dt, dd {
+    display: inline-block;
+    margin: 0;
+  }
+  dt {
+    font-weight: bold;
+    width: 35%;
+  }
+  dd {
+    width: 60%;
+  }
+}
+
+
+// Popular Tags
+//-------------
+.tagspopular {
+  margin-top: @global-margin;
+  ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+  }
+
+  ul > li {
+    color: @gray;
+    display: inline-block;
+    margin: 0 5px 5px 0;
+  }
+
+  ul > li > a {
+    background: @gray-lighter;
+    border-radius: 3px;
+    color: @gray;
+    display: block;
+    padding: 2px 5px;
+    // Links states
+    &:hover,
+    &:focus,
+    &:active {
+      background: @link-hover-color;
+      color: @white;
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+// Similar tags
+// ------------
+.tagssimilar {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  ul > li {
+    border-bottom: 1px solid @gray-lighter;
+    padding: 8px 0;
+  }
+
+  ul > li > a {
+    color: @gray;
+    // Link states
+    &:hover,
+    &:focus,
+    &:active {
+      color: @link-hover-color;
+    }
+  }
+}
+
+
+// Breadcrums Module
+// -----------------
+.module-ct > ol.breadcrumb {
+  padding: @padding-base-vertical @padding-base-horizontal;
+  margin-left: 0;
+}
+
+
+// Most read & Latest news module
+// ------------------------------
+ul.mostread,
+ul.latestnews {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    border-bottom: 1px dotted @t3-border-color;
+    margin: 0;
+    padding: (@t3-global-padding / 4) 0;
+
+    &:last-child {
+      border: 0;
+      padding-bottom: 0;
+    }
+
+    a {
+      color: @gray;
+
+      &:hover, &:focus, &:active {
+        color: @link-hover-color;
+      }
+    }
+  }
+}
+
+
+// Categories
+// ----------
+.categories-module, ul.categories-module,
+.category-module, ul.category-module {
+  margin: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    list-style: none;
+
+    &.active h4 a {
+      color: @gray-dark-max;
+    }
+  }
+  
+  h4 {
+    font-size: @font-size-base;
+    font-family: @font-family-sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    a {
+      color: @gray;
+      padding: 4px (@global-padding / 4);
+      display: block;
+      // Link States
+      &:hover, &:active, &:focus {
+        text-decoration: none;
+        color: @gray-dark-max;
+      }
+    }
+  }
+
+  a.mod-articles-category-title {
+    font-family: @font-family-serif;
+    color: @text-color;
+    padding: (@global-padding / 2) (@global-padding / 4);
+    display: block;
+    border-top: 1px solid @border-color;
+    // Link States
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+      color: @brand-primary;
+    }
+  }
+
+}
+
+
+// Articles Category - List View
+// -----------------------------
+.category-module {
+  .t3-sidebar & .link-item {
+    padding-left: 0;
+
+    p.img_caption {
+      display: none;
+    }
+
+    .img-intro-none, 
+    .img-intro-left, 
+    .img-intro-right, 
+    .img-fulltext-none, 
+    .img-fulltext-left, 
+    .img-fulltext-right, 
+    .img_caption {
+      width: 100% !important;
+    }
+  }
+
+  .item-image img {
+    width: 100%;
+  }
+
+  .mega-inner & .link-item {
+    padding-left: @global-padding/2;
+
+    .article-title {
+      max-height: (@font-size-base * 1.5) * 2;
+      overflow: hidden;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 0;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+}
+
+.item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .item {
+    border-bottom: 1px dotted @border-color;
+    padding: (@global-padding / 2) 0;
+
+    .item-inner {
+      position: relative;
+
+      &.has-image {
+        padding-left: 86px;
+      }
+
+      // Item title
+      .item-title {
+        line-height: 1.5;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: @font-family-serif;
+        text-transform: none;
+        a {
+          color: @headings-color;
+          font-size: @font-size-base;
+          padding: 0;
+
+          // Over states
+          &:hover, &:focus, &:active {
+            background: none;
+            color: @link-hover-color;
+          }
+        }
+      }
+
+      // Item image
+      .item-image {
+        display: block;
+        float: left;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        max-height: 50px;
+        width: 62px;
+        img {
+          max-width: 100%;
+        }
+      }
+
+      // Item meta
+      .item-meta {
+        color: @gray-light;
+        font-size: @font-size-smaller;
+        margin-bottom: @line-height-computed / 5;
+        text-transform: uppercase;
+
+        .category-name {
+          margin-right: 5px;
+        }
+      }
+
+      // Item introtext
+      .item-introtext {
+        margin-bottom: 0;
+      }
+
+    }
+  }
+}
+
+
+// Articles Category - Grid View
+// -----------------------------
+.category-module ul.grid-view {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    .make-md-column (4);
+    float: left !important;
+    border: 1px solid @gray-light-lv5 !important;
+    border-bottom: 0 !important;
+    border-left: 0 !important;
+    height: 92px;
+    background: #fff;
+    box-sizing: border-box;
+    p {
+      margin-bottom: 0;
+    }
+    .item-title {
+      max-height: (@font-size-base * 1.5) * 2;
+      overflow: hidden;
+    }
+  }
+}
+
+
+// ACY Mailing Module
+// ---------------------
+.acymailing_moduleacy-email {
+  margin-bottom: 0;
+  background-color: @white;
+  border-style: solid;
+  border-width: 25px;
+  -moz-border-image: url(../images/envelope.png) 31 27 28 31 repeat;
+  -webkit-border-image: url(../images/envelope.png) 31 27 28 31 repeat;
+  -o-border-image: url(../images/envelope.png) 31 27 28 31 repeat;
+  border-image: url(../images/envelope.png) 31 27 28 31 fill repeat;
+
+  .acymailing_form {
+    width: 100%;
+  }
+
+  .acymailing_introtext {
+    line-height: 1.5;
+    font-size: @font-size-base;
+    color: @gray-dark-lv2;
+  }
+
+  .acymailing_form tr:last-child input {
+    margin-top: 15px;
+  }
+
+  .acymailing_form input {
+    box-shadow: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: @gray-light-lv4;
+    margin-bottom: 5px;
+    font-size: @font-size-small;
+    padding: 8px 0;
+    width: 100% !important;
+  }
+}
+
+// Footer Mail
+.acymailing_moduleacy-email-footer {
+  margin-top: @global-margin;
+  padding: @global-padding / 2;
+  position: relative;
+
+  @media (max-width: @grid-float-breakpoint) {
+    background: @gray-dark-lv3;
+    margin-bottom: @global-margin;
+    margin-top: 0;
+    padding: @global-padding;
+    .acymailing_introtext {
+      text-align: center;
+    }
+  }
+
+  .acymailing_introtext {
+    color: @footer-module-text-color;
+  }
+
+  .acymailing_module_form td {
+    width: 100%;
+    float: left;
+  }
+
+  .acymailing_form tr td:last-child input {
+    background-color: @red;
+    color: @white;
+    margin-top: 10px;
+    padding: 8px 15px;
+  }
+
+  .acymailing_form input {
+    float: left;
+    background-color: transparent;
+    box-shadow: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: rgba(255,255,255, 0.2);
+    color: @footer-module-text-color;
+    font-size: @font-size-small;
+    padding: 8px 0 8px 10px;
+  }
+
+  .acymailing_mootoolsbutton {
+    a.acymailing_togglemodule {
+      background: @gray-dark;
+      padding: (@global-padding / 2) 0;
+      text-align: center;
+
+      &:hover, &:focus, &:active {
+        background: @brand-primary;
+      }
+    }
+  }
+
+  .modal {
+    display: block;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+  }
+}
+
+
+// Weather module
+// --------------
+.ja-weather {
+
+  // Basic
+  .icon,
+  .text {
+    display: inline-block;
+    line-height: 1;
+  }
+
+  .date {
+    text-transform: uppercase;
+  }
+
+  .city {
+    font-family: @font-family-sans-serif;
+    font-size: @font-size-h2;
+    font-weight: @font-weight-normal;
+    small {
+      display: inline;
+      margin-top: 5px;
+      font-size: @font-size-base;
+      color: rgba(255,255,255,.5);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: @font-weight-light;
+    }
+  }
+
+  // Weather Icons
+  .wi {
+    font-size: @font-size-larger;
+  }
+
+  .icon-large .wi {
+    font-size: @font-size-h1 * 1.5;
+  }
+
+  // The Panel
+  .panel-group {
+    margin: 0;
+  }
+
+  .panel-default {
+    border: 0;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 1px @border-color;
+
+    & > .panel-heading {
+      background: transparent;
+      border: 0;
+      position: relative;
+
+      h4 {
+        font-family: @font-family-sans-serif;
+      }
+
+      a {
+        display: block;
+        outline: none;
+        // Link States
+        &:hover, &:active, &:focus {
+          text-decoration: none;
+        }
+      }
+
+      span {
+        float: right;
+        color: @gray;
+        font-weight: @font-weight-normal;
+        position: absolute;
+        top: 10px;
+        right: @global-padding;
+      }
+    }
+
+    .panel-body {
+      padding: 0;
+
+      // Tables
+      .table,
+      table {
+        margin: 0;
+      }
+
+      table th,
+      table td {
+        padding-left: @global-padding;
+        padding-right: 0; 
+      }
+
+      th {
+        display: none;
+      }
+
+      td {
+        border-top-style: dotted;
+      }
+
+      tr:first-child td {
+        border-top: 0;
+      }
+
+      // Header 
+      .weather-header {
+        padding: (@global-padding/2) @global-padding;
+        padding-left: 90px;
+        background: @blue;
+        color: #fff;
+        position: relative;
+        .condition {
+          position: absolute;
+          left: @global-padding;
+          top: @global-padding;
+        }
+        > div {
+          display: inline-block;
+          margin-left: 12px;
+        }
+        .city {
+          margin-top: 6px;
+        }
+        .weather-info {
+          margin-top: 6px;
+          display: block;
+          text-transform: uppercase;
+        }
+      }
+
+      // Details
+      .weather-detail {
+        background: @blue;
+        color: #fff;
+        font-weight: @font-weight-light;
+        td {
+          border-top-color: darken(@blue, 5%);
+          border-top-style: solid;
+        }
+        tr:first-child td {
+          border-top: none;
+        }
+        .wi {
+          font-size: @font-size-larger;
+          margin-right: 5px;
+        }
+      }
+
+      // Forecast
+      .weather-forecast {
+        font-size: @font-size-small;
+      }
+
+    }
+
+    // Source Logo
+    .source-logo {
+      text-align: right;
+      padding: (@global-padding/2) @global-padding;
+      border-top: 1px solid @border-color;
+      img {
+        .opacity(0.3);
+      }
+    }
+  }
+
+  // Tabs Layout
+  // ---------------
+  .nav-tabs {
+    margin-bottom: 0;
+    border-left: 1px solid @border-color;
+    > li {
+      a {
+        &:hover, &:active, &:focus {
+        }
+      }
+
+      &.active {
+        > a {
+          background-color: @white;
+          color: @text-color;
+
+          &:hover, &:active, &:focus {
+            background-color: @white;
+            color: @text-color;
+          }
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    .panel-default { 
+      .panel-body { 
+        .weather-header {
+          background: @white;
+          color: @gray;
+          border-left: 1px solid @border-color;
+          border-right: 1px solid @border-color;
+        }
+
+        .weather-detail {
+          background: @white;
+          color: @gray;
+          border-left: 1px solid @border-color;
+          border-right: 1px solid @border-color;
+
+          tr:last-child td {
+            color: @text-color;
+            border-top: 1px solid @border-color;
+            background: @gray-light-max;
+          }
+        }
+
+        .city small {
+          color: rgba(0,0,0,0.5);
+        }
+      }
+    }
+  }
+}
+
+
+// Finance Module
+// ---------------
+.ja-finance {
+  border: 0;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 1px @border-color;
+
+  // The Tabs
+  .nav-tabs {
+    margin-bottom: 0;
+    border-left: 1px solid @border-color;
+    > li {
+      a {
+        &:hover, &:active, &:focus {
+        }
+      }
+
+      &.active {
+        > a {
+          background-color: #fff;
+          color: @text-color;
+          &:hover, &:active, &:focus {
+            background-color: #fff;
+            color: @text-color;
+          }
+        }
+      }
+    }
+  }
+
+  // Header
+  .finance-header {
+    color: @gray;
+    padding: @global-padding (@global-padding / 2);
+    .clearfix();
+
+    h4 {
+      color: @gray;
+      font-family: @font-family-sans-serif;
+      letter-spacing: 1px;
+      margin: 0;
+      line-height: 1;
+    }
+
+    .text {
+      display: inline-block;
+      text-transform: uppercase;
+    }
+
+    small {
+      display: block;
+      margin-top: 5px;
+      font-size: @font-size-base;
+    }
+
+    .finance-snap-data {
+      margin-top: @global-margin / 2;
+      line-height: 1;
+      > div {
+        padding-top: 5px;
+        font-size: @font-size-h4;
+        display: block;
+        float: left;
+      }
+      strong {
+        display: block;
+        float: left;
+        color: @text-color;
+        font-size: @font-size-h1;
+        margin-right: @global-margin / 2;
+        border: 1px solid @border-color;
+        background: @gray-light-max;
+        padding: 6px 12px;
+      }
+      .warning {
+        font-size: @font-size-small;
+      }
+    }
+  }
+
+  // Table
+  .table {
+    font-size: @font-size-small;
+    margin: 0;
+    .head {
+      background: @gray-light-max;
+      text-align: center;
+      font-weight: @font-weight-bold;
+      border-left: 1px solid @border-color;
+      border-right: 1px solid @border-color;
+    }
+    .currency {
+      padding-left: @global-padding / 2;
+      text-transform: uppercase;
+    }
+  }
+
+}
+
+
+// ACM Videos
+// ----------
+.ja-video-list {
+  span.fa-2x {
+    color: @red;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  .video-wrapper {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .jp-gui {
+      position: absolute;
+      bottom: 0;
+      .jp-controls {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+
+// Top bloggers
+// ------------
+.bloggers-wrap {
+  .blogger-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      border-bottom: 1px solid lighten(@gray-lighter, 1%);
+      padding: @global-padding 0 @global-padding (@global-padding * 3);
+      position: relative;
+      &:last-child {
+        border: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .avatar {
+    background: @white;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2);
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: @global-padding;
+    padding: 2px;
+    overflow: hidden;
+    img {
+      border-radius: 50%;
+      width: @global-padding * 2;
+    }
+  }
+
+  h4 {
+    font-size: @font-size-small;
+    margin: 0 0 5px;
+    text-transform: uppercase;
+    font-weight: @font-weight-bold;
+  }
+
+  p {
+    color: @gray;
+    font-weight: @font-weight-light;
+    font-size: @font-size-small;
+    text-transform: uppercase;
+  }
+
+  .social-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      border: 0;
+      display: inline-block;
+      padding: 0 (@global-padding / 6);
+      a {
+        background-color: transparent;
+        border: 1px solid @gray;
+        border-radius: 50%;
+        color: @gray;
+        display: block;
+        font-size: @font-size-base;
+        height: @global-padding;
+        line-height: @global-padding;
+        text-align: center;
+        width: @global-padding;
+        &:hover, &:active, &:focus {
+          color: @gray-darker;
+          border-color: @gray-darker;
+        }
+      }
+    }
+  }
+}

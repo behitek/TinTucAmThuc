@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<icon>video</icon>
+	<type>video</type>
+	<title>Video</title>
+	<fields name="attribs">
+		<fieldset name="content_meta"
+				  label="Video">
+			<!--IS REQUIRED FIELD-->
+			<field name="ctm_content_type"
+				   type="hidden"
+				   default="video"
+				   label="PLG_JACONTENT_TYPE_CONTENT_TYPE_LABEL"
+				   description="PLG_JACONTENT_TYPE_CONTENT_TYPE_DESC"/>
+			<!--IS REQUIRED FIELD-->
+
+
+			<field
+					name="ctm_source"
+					type="list"
+					default="youtube"
+					label="PLG_JACONTENT_TYPE_SOURCE_LABEL"
+					description="PLG_JACONTENT_TYPE_SELECT_A_SOURCE_OF_VIDEO_DESC">
+				<option value="local">PLG_JACONTENT_TYPE_LOCAL</option>
+				<option value="youtube">PLG_JACONTENT_TYPE_YOUTUBE</option>
+				<option value="vimeo">PLG_JACONTENT_TYPE_VIMEO</option>
+			</field>
+			<field
+					name="ctm_local_src"
+					type="modal_media"
+					legalExtensions="m4v,ogv"
+					label="PLG_JACONTENT_TYPE_SOURCE_LABEL"
+					description="PLG_JACONTENT_TYPE_SELECT_OR_UPLOAD_A_VIDEO_DESC"/>
+			<field
+					name="ctm_embed_url"
+					type="text"
+					size="50"
+					default=""
+					label="PLG_JACONTENT_TYPE_VIDEO_URL_OR_ID_LABEL"
+					description="PLG_JACONTENT_TYPE_ENTER_A_VIDEO_URL_OR_ID_DESC"/>
+			<field
+					name="ctm_thumbnail"
+					type="media"
+					preview="true"
+					previewWidth="360"
+					previewHeight="180"
+					label="PLG_JACONTENT_TYPE_THUMBNAIL_LABEL"
+					description="PLG_JACONTENT_TYPE_SELECT_A_THUMBNAIL_DESC"/>
+			<field
+					name="ctm_description"
+					type="textarea"
+					cols="40"
+					rows="3"
+					label="PLG_JACONTENT_TYPE_VIDEO_DESCIPTION_LABEL"
+					description="PLG_JACONTENT_TYPE_VIDEO_DESCIPTION_DESC"/>
+			<field
+					name="ctm_width"
+					type="text"
+					size="50"
+					default="640"
+					label="PLG_JACONTENT_TYPE_WIDTH_LABEL"
+					description="PLG_JACONTENT_TYPE_WIDTH_OF_VIDEO_DESC"/>
+			<field
+					name="ctm_height"
+					type="text"
+					size="50"
+					default="360"
+					label="PLG_JACONTENT_TYPE_HEIGHT_LABEL"
+					description="PLG_JACONTENT_TYPE_HEIGHT_OF_VIDEO_DESC"/>
+			<field
+					name="video_filed_depend"
+					type="japanel"
+					hidden="true" level="3">
+
+				<option for="ctm_source" value="local" hideRow="true">ctm_local_src</option>
+				<option for="ctm_source" value="youtube" hideRow="true">ctm_embed_url</option>
+				<option for="ctm_source" value="vimeo" hideRow="true">ctm_embed_url</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <sampledata><![CDATA[
+        {":type":"ja_teline_v:news-featured","news-featured":{"jatools-layout-news-featured":"style-4","news-featured[catid]":["8"],"news-featured[show_front]":["show"],"news-featured[featured_leading]":["12"],"news-featured[featured_intro_columns]":["4"],"news-featured[article_ordering]":["publish_up"],"news-featured[article_ordering_direction]":["DESC"],"news-featured[section_heading]":["More Articles"],"news-featured[show_section_heading]":["1"],"news-featured[leading_auto_play]":["0"]}}
+    ]]></sampledata>
+    <fields name="news-featured">
+        <fieldset name="basic" label="TPL_FEATURED_BASIC_LABEL" description="TPL_FEATURED_FEATURED_BASIC_DESC">
+            <field name="catid" type="category" extension="com_content" label="TPL_FEATURED_CATEGORIES_SETTINGS_LABEL"
+                   description="TPL_FEATURED_CATEGORIES_SETTINGS_DESC" multiple="false"/>
+
+            <field
+                    name="show_front"
+                    type="list"
+                    default="show"
+                    label="TPL_FEATURED_SHOW_FEATURED_LABEL"
+                    description="TPL_FEATURED_SHOW_FEATURED_DESC">
+                <option value="show">JSHOW</option>
+                <option value="hide">JHIDE</option>
+                <option value="only">TPL_FEATURED_ONLY_FEATURED_VALUE</option>
+            </field>
+
+            <field name="featured_leading" type="text"
+                   description="TPL_FEATURED_NUM_LEADING_ARTICLES_DESC"
+                   label="TPL_FEATURED_NUM_LEADING_ARTICLES_LABEL"
+                   size="3"
+                   default="1"/>
+
+            <field
+                    name="featured_intro_columns"
+                    type="list"
+                    default="4"
+                    label="TPL_FEATURED_NUM_COLUMNS_LABEL"
+                    description="TPL_FEATURED_NUM_COLUMNS_DESC">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+            </field>
+
+        </fieldset>
+
+        <fieldset name="ordering" label="TPL_FEATURED_ORDERING_LABEL">
+            <field name="article_ordering" type="list"
+                   default="publish_up"
+                   label="TPL_FEATURED_ARTICLE_ORDER_LABEL"
+                   description="TPL_FEATURED_ARTICLE_ORDER_DESC">
+                <option value="a.ordering">JGLOBAL_ORDERING</option>
+                <option value="fp.ordering">TPL_FEATURED_ORDER</option>
+                <option value="a.hits">JGLOBAL_MOST_HITS</option>
+                <option value="a.title">JGLOBAL_TITLE_ALPHABETICAL</option>
+                <option value="a.created">JGLOBAL_CREATED</option>
+                <option value="modified">JGLOBAL_MODIFIED</option>
+                <option value="publish_up">JPUBLISHED</option>
+            </field>
+
+            <field name="article_ordering_direction" type="list"
+                   default="TPL_FEATURED_ORDER_DIRECTION_LABEL"
+                   label="TPL_FEATURED_ORDER_DIRECTION_LABEL"
+                   description="TPL_FEATURED_ORDER_DIRECTION_DESC">
+                <option value="DESC">TPL_ORDER_DIRECTION_DESCENDING_VALUE</option>
+                <option value="ASC">TPL_ORDER_DIRECTION_ASCENDING_VALUE</option>
+            </field>
+        </fieldset>
+
+        <fieldset name="leading" label="TPL_FEATURED_LEADING_ARTICLES_LABEL" description="TPL_FEATURED_LEADING_ARTICLES_DESC">
+
+            <field name="section_heading" type="text"
+                   description="TPL_FEATURED_LEADING_TITLE_DESC"
+                   label="TPL_FEATURED_LEADING_TITLE_LABEL"
+                   size="20"
+                   default=""/>
+
+            <field name="show_section_heading" type="list"
+                   description="TPL_FEATURED_SHOW_LEADING_TITLE_DESC"
+                   label="TPL_FEATURED_SHOW_LEADING_TITLE_LABEL">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+            <field name="leading_auto_play" type="list"
+                   description="TPL_FEATURED_LEADING_AUTO_PLAY_DESC"
+                   label="TPL_FEATURED_LEADING_AUTO_PLAY_LABEL">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            
+        </fieldset>
+    </fields>
+</form>

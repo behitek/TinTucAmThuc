@@ -1,0 +1,190 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Teline V Template
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - Copyrighted Commercial Software
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+ * This file may not be redistributed in whole or significant part.
+ * ------------------------------------------------------------------------
+ */
+ 
+/**
+ * @copyright Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @license   GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+/* Import Font 
+---------------------- */
+
+ /* MAIN OFFLINE STYLE
+ ------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#frame {
+  border: 2px solid;
+  width: 400px;
+  padding: 30px;
+  text-align: center;
+  margin: 100px auto;
+}
+
+.site-title {
+  text-transform: uppercase;
+  margin: 20px 0 0 0;
+  font-size: 22px;
+}
+
+.offline-message {
+  margin: 20px 0;
+}
+
+.no-margin-top {
+  margin-top: 0 !important;
+}
+
+fieldset.input {
+  border: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+
+.login-field {}
+.login-field label {
+  display: block;
+  text-align: left;
+  padding: 0;
+  font-weight: bold;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.login-field input[type=text],
+.login-field input[type=email],
+.login-field input[type=password] {
+  box-shadow: none;
+  border: 1px solid;
+  padding: 10px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 100%;
+  font-size: 14px;
+}
+
+.login-field input[type=text]:focus,
+.login-field input[type=email]:focus,
+.login-field input[type=password]:focus {
+  outline: 0;
+  border-color: #cc0000;
+}
+
+#form-login {
+  width: 320px;
+  margin: 0 auto;
+  padding: 20px 0 0 0;
+  border: 2px solid;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+#form-login-remember,
+#submit-buton {
+  display: inline-block;
+}
+
+#submit-buton .login {
+  background: #cc0000;
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-shadow: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+#submit-buton .login:hover,
+#submit-buton .login:focus {
+  background: #B60202;
+  outline: 0;
+}
+
+#system-message-container {
+}
+#system-message .alert{
+  position: absolute;
+  width: 400px;
+  top: 20px;
+  left: 50%;
+  margin-left: -200px;
+  padding: 20px;
+}
+
+#system-message .alert .close {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+#system-message .alert h4 {
+  margin: 0;
+}
+
+#system-message .alert p {
+  font-size: 14px;
+  margin: 5px 0 0 0;
+}
+
+#system-message .alert.alert-warning {
+  color: #fff;
+  background: rgba(226, 61, 61, 0.9);
+}
+
+#system-message .alert.alert-warning .close {
+  color: #fff;
+}
+
+/*Responsive
+------------------------------*/
+/* Control screen width 600px */
+@media screen and (max-width: 600px ) {
+  #frame {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: auto;
+  }
+
+  #system-message {
+    padding: 10px;
+    width: auto;
+  }
+}
+
+/*Control screen mobile */
+@media screen and (max-width: 480px ) {
+  #frame {
+    max-width: 100%;
+  }
+}

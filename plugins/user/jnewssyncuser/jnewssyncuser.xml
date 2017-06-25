@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/2.5/plugin-install.dtd">
+<extension version="2.5" type="plugin" group="user" method="upgrade">
+	<name>jNews User Synchronization</name>
+	<author>Joobi</author>
+	<creationDate>January 2013</creationDate>
+	<copyright>Copyright (C) 2016 Joobi All rights reserved</copyright>
+	<license>GNU GPLv3</license>
+	<authorEmail>support@joobi.co</authorEmail>
+	<authorUrl>https://joobi.co</authorUrl>
+	<version>2.1</version>
+	<description>This plugin does the synchronization of Joomla users with jNews.</description>
+	<files>
+		<filename plugin="jnewssyncuser">jnewssyncuser.php</filename>
+	</files>
+
+	<params>
+		<param name="lists" type="text" default="0" label="jNews List IDs" description="You can specify the list IDs that your site users will subscribe to. If left blank, it will take all jNews lists"/>
+	</params>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="lists" type="text" default="0" label="jNews List IDs" description="You can specify the list IDs that your site users will subscribe to. If left blank, it will take all jNews lists"/>
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

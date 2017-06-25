@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <sampledata><![CDATA[
+        {":type":"ja_teline_v:news-featured","news-featured":{"jatools-layout-news-featured":"style-1","news-featured[catid]":["8"],"news-featured[show_front]":["only"],"news-featured[featured_leading]":["4"],"news-featured[featured_intro]":["3"],"news-featured[featured_intro_columns]":["3"],"news-featured[featured_links]":["7"],"news-featured[article_ordering]":["publish_up"],"news-featured[article_ordering_direction]":["DESC"],"news-featured[leading_title]":["In The Spotlight"],"news-featured[show_leading_title]":["1"],"news-featured[show_leading_intro]":["1"],"news-featured[show_leading_readmore]":["0"],"news-featured[leading_auto_play]":["1"],"news-featured[show_intro_text]":["0"],"news-featured[show_intro_readmore]":["0"],"news-featured[block_links_title]":["More News"],"news-featured[show_block_links_title]":["1"],"news-featured[show_link_author]":["0"],"news-featured[show_link_publish_date]":["1"],"news-featured[show_link_hits]":["0"]}}
+    ]]></sampledata>
+    <fields name="news-featured">
+        <fieldset name="basic" label="TPL_FEATURED_BASIC_LABEL" description="TPL_FEATURED_FEATURED_BASIC_DESC">
+            <field name="catid" type="category" extension="com_content" label="TPL_FEATURED_CATEGORIES_SETTINGS_LABEL"
+                   description="TPL_FEATURED_CATEGORIES_SETTINGS_DESC" multiple="true"/>
+
+            <field name="show_front" type="list" default="show" label="TPL_FEATURED_SHOW_FEATURED_LABEL" description="TPL_FEATURED_SHOW_FEATURED_DESC">
+                <option value="show">JSHOW</option>
+                <option value="hide">JHIDE</option>
+                <option value="only">TPL_FEATURED_ONLY_FEATURED_VALUE</option>
+            </field>
+
+            <field name="featured_leading" type="text"
+                   description="TPL_FEATURED_NUM_LEADING_ARTICLES_DESC"
+                   label="TPL_FEATURED_NUM_LEADING_ARTICLES_LABEL"
+                   size="3"
+                   default="1"/>
+                   
+            <field name="featured_intro" type="text" 
+                   description="TPL_FEATURED_NUM_INTRO_ARTICLES_DESC"
+                   label="TPL_FEATURED_NUM_INTRO_ARTICLES_LABEL"
+                   size="3"
+                   default="3"/>
+
+            <field
+                    name="featured_intro_columns"
+                    type="list"
+                    default="3"
+                    label="TPL_FEATURED_NUM_COLUMNS_LABEL"
+                    description="TPL_FEATURED_NUM_COLUMNS_DESC">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+            </field>
+
+            <field name="featured_links" type="text"
+                   description="TPL_FEATURED_NUM_LINKS_DESC"
+                   label="TPL_FEATURED_NUM_LINKS_LABEL"
+                   size="3"
+                   default="5"/>
+        </fieldset>
+
+        <fieldset name="ordering" label="TPL_FEATURED_ORDERING_LABEL" description="TPL_FEATURED_ORDERING_DESC">
+            <field name="article_ordering" type="list"
+                   default="publish_up"
+                   label="TPL_FEATURED_ARTICLE_ORDER_LABEL"
+                   description="TPL_FEATURED_ARTICLE_ORDER_DESC">
+                <option value="a.ordering">JGLOBAL_ORDERING</option>
+                <option value="fp.ordering">TPL_FEATURED_ORDER</option>
+                <option value="a.hits">JGLOBAL_MOST_HITS</option>
+                <option value="a.title">JGLOBAL_TITLE_ALPHABETICAL</option>
+                <option value="a.created">JGLOBAL_CREATED</option>
+                <option value="modified">JGLOBAL_MODIFIED</option>
+                <option value="publish_up">JPUBLISHED</option>
+            </field>
+
+            <field name="article_ordering_direction" type="list"
+                   default="TPL_FEATURED_ORDER_DIRECTION_LABEL"
+                   label="TPL_FEATURED_ORDER_DIRECTION_LABEL"
+                   description="TPL_FEATURED_ORDER_DIRECTION_DESC">
+                <option value="DESC">TPL_ORDER_DIRECTION_DESCENDING_VALUE</option>
+                <option value="ASC">TPL_ORDER_DIRECTION_ASCENDING_VALUE</option>
+            </field>
+        </fieldset>
+
+        <fieldset name="leading" label="TPL_FEATURED_LEADING_ARTICLES_LABEL" description="TPL_FEATURED_LEADING_ARTICLES_DESC">
+            <field name="leading_title" type="text"
+                   description="TPL_FEATURED_LEADING_TITLE_DESC"
+                   label="TPL_FEATURED_LEADING_TITLE_LABEL"
+                   size="20"
+                   default=""/>
+
+            <field name="show_leading_title" type="list"
+                   description="TPL_FEATURED_SHOW_LEADING_TITLE_DESC"
+                   label="TPL_FEATURED_SHOW_LEADING_TITLE_LABEL">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+            <field name="show_leading_intro" type="list"
+                   description="TPL_FEATURED_SHOW_INTRO_DESC"
+                   label="TPL_FEATURED_SHOW_INTRO_LABEL">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+            <field
+                    name="show_leading_readmore"
+                    type="list"
+                    description="TPL_FEATURED_SHOW_READMORE_DESC"
+                    label="TPL_FEATURED_SHOW_READMORE_LABEL">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+            <field name="leading_auto_play" type="list"
+                   description="TPL_FEATURED_LEADING_AUTO_PLAY_DESC"
+                   label="TPL_FEATURED_LEADING_AUTO_PLAY_LABEL">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+        </fieldset>
+
+        <fieldset name="intro" label="TPL_FEATURED_INTRO_SETTING_LABEL" description="TPL_FEATURED_INTRO_SETTING_DESC">
+
+            <field name="show_intro_text" type="list"
+                   description="TPL_FEATURED_SHOW_INTRO_DESC"
+                   label="TPL_FEATURED_SHOW_INTRO_LABEL">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+            <field
+                    name="show_intro_readmore"
+                    type="list"
+                    description="TPL_FEATURED_SHOW_READMORE_DESC"
+                    label="TPL_FEATURED_SHOW_READMORE_LABEL">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+        </fieldset>
+
+        <fieldset name="feature_links" label="TPL_FEATURED_FEATURE_LINK_LABEL" description="TPL_FEATURED_FEATURE_LINK_DESC">
+            <field name="block_links_title" type="text"
+                   description="TPL_FEATURED_LINK_TITLE_DESC"
+                   label="TPL_FEATURED_LINK_TITLE_LABEL"
+                   size="20"
+                   default=""/>
+
+            <field name="show_block_links_title" type="list"
+                   description="TPL_FEATURED_SHOW_LINK_TITLE_DESC"
+                   label="TPL_FEATURED_SHOW_LINK_TITLE_LABEL">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+            <field name="show_link_author" type="list"
+                   description="TPL_FEATURED_SHOW_AUTHOR_DESC"
+                   label="TPL_FEATURED_SHOW_AUTHOR_LABEL">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="use_article">TPL_FEATURED_VALUE_USE_ARTICLE_SETTINGS</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+            <field name="show_link_publish_date" type="list"
+                   description="TPL_FEATURED_SHOW_PUBLISH_DATE_DESC"
+                   label="TPL_FEATURED_SHOW_PUBLISH_DATE_LABEL">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="use_article">TPL_FEATURED_VALUE_USE_ARTICLE_SETTINGS</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+            <field name="show_link_hits" type="list"
+                   description="TPL_FEATURED_SHOW_HITS_DESC"
+                   label="TPL_FEATURED_SHOW_HITS_LABEL">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="use_article">TPL_FEATURED_VALUE_USE_ARTICLE_SETTINGS</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+        </fieldset>
+
+    </fields>
+</form>

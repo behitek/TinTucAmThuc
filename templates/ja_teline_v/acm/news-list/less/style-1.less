@@ -1,0 +1,228 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+
+// --------------------------------------------------------
+// DEFAULT MAGAZINE STYLE
+// --------------------------------------------------------
+
+//
+// MAGAZINE CATEGORIES
+// --------------------------------------------------------
+.magazine-categories {
+  padding: 0;
+}
+
+.magazine-list {
+  .magazine-section-heading {
+    border-top: 1px solid @border-color;
+  }
+}
+
+.magazine-category {
+  padding: 0;
+  .box-sizing(border-box);
+
+  &:first-child {
+  }
+
+  // Items
+  .magazine-item {
+    padding-top: @global-padding;
+    padding-bottom: @global-padding;
+    @media (max-width: @screen-sm) {
+      padding-bottom: 0;
+      &:last-child {
+        padding-bottom: @global-padding;
+      }
+    }
+  }
+
+  // Media
+  .magazine-item {
+    .item-image {
+    }
+  }
+
+  // Metadata
+  .article-aside {
+  }
+
+  // Text Intro
+  .magazine-item-ct {
+  }
+
+  // Leadings
+  // -----------
+  .magazine-leading {
+    .article-title {
+      h3 {
+        font-size: @font-size-base;
+      }
+    }
+    .magazine-item-ct {
+      font-size: @font-size-small;
+    }
+  }
+
+}
+
+// Different Style for Smaller Screen
+@media (min-width: @screen-xs) and (max-width: @screen-xs-max) {
+.magazine-category {
+
+    // Items
+    .magazine-item {
+    }
+
+    .magazine-item-main {
+       .make-xs-column(8);
+       padding-right: 0;
+    }
+
+    // Media
+    .magazine-item-media {
+      float: left;
+      .make-xs-column(4);
+      padding-left: 0;
+      padding-right: 0;
+
+      .item-image {
+        max-height: @line-height-computed * 6;
+        @media screen and (min-width: @screen-sm) {
+          margin-top: (@global-margin / 2);
+        }
+      }
+
+      .category-name {
+        bottom: auto;
+        top: @global-padding / 2;
+        left: @global-padding / 2;
+      }
+
+    }
+
+  }
+}
+
+//
+// LIST VIEWS
+// --------------------------------------------------------
+@media (min-width: @grid-float-breakpoint) {
+
+  .list-view {
+
+    .magazine-category {
+      padding: 0;
+      .box-sizing(border-box);
+
+      &:first-child {
+      }
+
+      // Row
+      .row-articles {
+        border-bottom: 0;
+
+        &:last-child {
+          margin-bottom: 0;
+          border-bottom: 0;
+        }
+
+        // Remove Padding on Desktop
+        @media screen and (min-width: @screen-md) {
+          .magazine-item-media {
+            padding-right: 0;
+          }
+        }
+
+      }
+
+      // Items
+      .magazine-item {
+        border-right: 0;
+        border-bottom: 1px dotted @border-color;
+        width: 100%;
+      }
+
+      .magazine-item-main {
+         .make-md-column(8);
+         padding-right: 0;
+      }
+
+      // Title
+      .article-title {
+        h3 {
+          font-size: @font-size-h4;
+        }
+      }
+
+      // Media
+      .magazine-item-media {
+        float: left;
+        .make-md-column(4);
+        padding-left: 0;
+
+        .item-image {
+          max-height: @line-height-computed * 6;
+          @media screen and (min-width: @screen-sm) {
+            margin-top: (@global-margin / 2);
+          }
+        }
+
+        .category-name {
+          bottom: auto;
+          top: @global-padding / 2;
+          left: @global-padding / 2;
+        }
+
+      }
+
+      // Metadata
+      .magazine-item {
+        .article-aside {
+        }
+      }
+
+      // Text Intro
+      .magazine-item-ct {
+        display: block; // Show the Intro Text on List View
+        margin-top: @line-height-computed / 2;
+        font-size: @font-size-base;
+      }
+
+      // Leadings
+      // -----------
+      .magazine-leading {
+
+        // Title
+        .article-title {
+          h3 {
+            font-size: @font-size-h2;
+          }
+        }
+
+        // Media
+        .magazine-item-media {
+          .item-image {
+            max-height: @line-height-computed * 8;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+}
+

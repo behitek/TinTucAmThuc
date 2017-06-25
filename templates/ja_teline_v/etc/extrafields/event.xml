@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="attribs"
+			addfieldpath="/templates/ja_teline_v/etc/fields">
+		<fieldset name="extrafields" label="Event Info">
+			<field name="content_type" type="hidden" default="event" label="Content Type" />
+			<field name="event_latitude" type="text" default="" label="Latitude" description="Latitude"/>
+			<field name="event_longitude" type="text" default="" label="Longitude" description="Longitude"/>
+			<field name="event_venue" type="text" default="" label="Venue" description="Venue"/>
+			<field name="event_addr1" type="text" default="" label="Address 1" description="Address 1"/>
+			<field name="event_addr2" type="text" default="" label="Address 2" description="Address 2"/>
+			<field name="event_speakers" type="contacts" note="speakers" default="" label="Speakers" description="Speakers"/>
+			<field name="event_sponsors" type="contacts" note="sponsors" default="" label="Sponsors" description="Sponsors"/>
+			<field name="event_start" type="calendar" default="" label="Start Time" description="Start Time"/>
+			<field name="event_end" type="calendar" default="" label="End Time" description="End Time"/>
+			<field name="event_loop" type="text" default="" label="Loop" description=""/>
+			<field name="event_online" type="radio" class="btn-group" default="0" label="Online Event?" description="Online Event?">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="event_live" type="radio" class="btn-group" default="0" label="Live Now?" description="Is Online Event live now?">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="event_tickets" type="editor" buttons="true" height="300" filter="raw" default="" label="Tickets" description="Tickets"/>
+			<field name="event_livedata" type="editor" buttons="true" filter="raw" default="" label="Real time data" description="Real time data"/>
+		</fieldset>
+	</fields>
+</form>

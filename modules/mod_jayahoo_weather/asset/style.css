@@ -1,0 +1,50 @@
+.ja-weather {}
+
+.ja-weather .table tr th {
+    white-space: nowrap;
+}
+.ja-weather .change-up {
+    color: #178817;
+}
+.ja-weather .change-down {
+    color: #CC171B;
+}
+
+
+/*Adding some wind direction icons that Weather icons does not support*/
+/*same icon with: north*/
+.wi-wind-north-north-east:before {
+    content: "\f060";
+}
+/*same icon with: north-east*/
+.wi-wind-east-north-east:before {
+    content: "\f05e";
+}
+/*same icon with: east*/
+.wi-wind-east-south-east:before {
+    content: "\f061";
+}
+/*same icon with: south-east*/
+.wi-wind-south-south-east:before {
+    content: "\f05b";
+}
+/*same icon with: south-east*/
+.wi-wind-south-south-east:before {
+    content: "\f05b";
+}
+/*same icon with: south*/
+.wi-wind-south-south-west:before {
+    content: "\f05c";
+}
+/*same icon with: south-west*/
+.wi-wind-west-south-west:before {
+    content: "\f05a";
+}
+/*same icon with: west*/
+.wi-wind-west-north-west:before {
+    content: "\f059";
+}
+/*same icon with: north-west*/
+.wi-wind-north-north-west:before {
+    content: "\f05d";
+}

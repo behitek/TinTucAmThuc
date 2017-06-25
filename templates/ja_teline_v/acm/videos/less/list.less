@@ -1,0 +1,76 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+.videos-list {
+
+  .magazine-categories {
+    padding: 0;
+
+    // Section heading
+    .videos-section-heading {
+      background: lighten(@black, 7%);
+      border: 1px solid @gray-darker;
+      color: @white;
+    }
+  }
+
+  .row-articles {
+    border-color: @gray-darker;
+  }
+
+  .row-articles .videos-item {
+    border-color: @gray-darker;
+    padding: @global-padding;
+    position: relative;
+    border-right: 1px dotted;
+  }
+
+  .video-sidebar & .videos-item-media .item-image {
+    margin-bottom: 0;
+  }
+
+  // Loadmore button
+  // ---------------
+  .load-more {
+    border: 1px solid @gray-darker;
+    padding: 0;
+
+    .btn {
+      background: transparent;
+      border: 0;
+      color: @gray-light;
+      padding: (@global-padding / 2) 0;
+      text-align: center;
+      outline: none;
+      width: 100%;
+      .transition(background 0.35);
+      &:hover {
+        background: @gray-darker;
+        color: @white;
+      }
+      &:disabled {
+        color: @gray-dark;
+      }
+    }
+  }
+
+}
+
+
+// FIX FOR IE8
+.ie8 .videos-list {
+  .row-articles .videos-item {
+    zoom: 1;
+    width: 25%;
+  }
+}

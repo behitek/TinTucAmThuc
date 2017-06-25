@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<icon>images</icon>
+	<type>gallery</type>
+	<title>Gallery</title>
+	<fields name="attribs">
+		<fieldset name="content_meta"
+				  label="Gallery">
+			<!--IS REQUIRED FIELD-->
+			<field name="ctm_content_type"
+				   type="hidden"
+				   default="gallery"
+				   label="PLG_JACONTENT_TYPE_CONTENT_TYPE_LABEL"
+				   description="PLG_JACONTENT_TYPE_CONTENT_TYPE_DESC"/>
+			<!--IS REQUIRED FIELD-->
+
+
+			<field name="ctm_gallery" type="jaitems" label="PLG_JACONTENT_TYPE_GALLERY_LABEL" description="PLG_JACONTENT_TYPE_SELECT_AN_IMAGES_DESC" hiddenlabel="PLG_JACONTENT_TYPE_GALLERY_LABEL" hidden="1" class="no-label">
+				<item name="src" type="media" preview="true" preview_width="100" preview_height="100" default="" label="PLG_JACONTENT_TYPE_IMAGE_LABEL" description="PLG_JACONTENT_TYPE_SELECT_AN_IMAGE_DESC" required="1" />
+				<item name="class" size="10"  type="text" default="" label="PLG_JACONTENT_TYPE_CLASS_LABEL" description="PLG_JACONTENT_TYPE_CLASS_DESC" />
+				<item name="caption" cols="40"  type="textarea" default="" label="PLG_JACONTENT_TYPE_CAPTION_LABEL" description="PLG_JACONTENT_TYPE_CAPTION_DESC" />
+				<item name="link" size="40" type="text" default="" label="PLG_JACONTENT_TYPE_LINK_LABEL" description="PLG_JACONTENT_TYPE_LINK_DESC" />
+			</field>
+		</fieldset>
+	</fields>
+</form>

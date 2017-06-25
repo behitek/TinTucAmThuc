@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" method="upgrade" client="site">
+	<name>Custom HTML advanced</name>
+	<author>Pluginaria.com</author>
+	<creationDate>April 2014</creationDate>
+	<copyright>Copyright (C) 2013 Pluginaria.com.</copyright>
+	<license>GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<authorEmail>feedback@jtricks.com</authorEmail>
+	<authorUrl>www.pluginaria.com</authorUrl>
+	<version>2.6</version>
+	<description>MOD_CUSTOM_ADVANCED_DESCRIPTION</description>
+	<files>
+        <folder>language</folder>
+    	<filename module="mod_custom_advanced">mod_custom_advanced.php</filename>
+	</files>                                                                                                                        
+	<languages folder="language">
+            <language tag="en-GB">en-GB/en-GB.mod_custom_advanced.ini</language>
+            <language tag="en-GB">en-GB/en-GB.mod_custom_advanced.sys.ini</language>
+    </languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+                    name="customHtml"
+                    type="textarea"
+                    filter="raw"
+                    default="" label="MOD_CUSTOM_ADVANCED_CUSTOM_HTML_LABEL"
+                    description="" rows="32" cols="60"/>
+   				<field
+   					name="prepare_content"
+   					type="radio"
+   					class="btn-group btn-group-yesno"
+   					label="MOD_CUSTOM_ADVANCED_PREPARE_CONTENT_LABEL"
+   					description="MOD_CUSTOM_ADVANCED_PREPARE_CONTENT_DESCRIPTION"
+   					default="0">
+   					<option value="1">JYES</option>
+   					<option value="0">JNO</option>
+   				</field>
+       		    <field
+                    name="evalPhp"
+                    type="textarea"
+                    filter="raw"
+                    default="" label="MOD_CUSTOM_ADVANCED_CUSTOM_PHP_CODE_LABEL"
+                    description="" rows="16" cols="60"/>
+				<field
+                    name="moduleStyle"
+                    type="text" default=""
+                    label="MOD_CUSTOM_ADVANCED_MODULE_STYLE_LABEL"
+                    description="MOD_CUSTOM_ADVANCED_MODULE_STYLE_DESCRIPTION"/>
+			</fieldset>
+			<fieldset name="CUSTOM_ADVANCED_HEADER">
+				<field name="cssOverride"
+                    type="textarea" default=""
+                    label="MOD_CUSTOM_ADVANCED_CSS_OVERRIDE_LABEL"
+                    description="MOD_CUSTOM_ADVANCED_CSS_OVERRIDE_DESCRITION"
+                    filter="raw"
+                    rows="16" cols="60"/>
+				<field name="styleSheet"
+                    type="text" default=""
+                    label="MOD_CUSTOM_ADVANCED_CSS_STYLE_SHEET_LABEL"
+                    description="MOD_CUSTOM_ADVANCED_CSS_STYLE_SHEET_DESCRIPTION"
+                    filter="raw"/>
+   				<field name="javascriptFile"
+                    type="text" default=""
+                    label="MOD_CUSTOM_ADVANCED_JAVASCRIPT_FILE_LABEL"
+                    description="MOD_CUSTOM_ADVANCED_JAVASCRIPT_FILE_DESCRIPTION"
+                    filter="raw"/>
+			</fieldset>
+			<fieldset name="advanced">
+                <field name="htmlComments"
+                    type="checkbox"  value="1" default="1" 
+                    label="MOD_CUSTOM_ADVANCED_HTML_COMMENTS_LABEL"
+                    description="MOD_CUSTOM_ADVANCED_HTML_COMMENTS_DESCRIPTION"/>
+                <field name="requireHttpParam"
+                    type="text" default=""
+                    label="MOD_CUSTOM_ADVANCED_REQUIRE_HTTP_PARAM_LABEL"
+                    description="MOD_CUSTOM_ADVANCED_REQUIRE_HTTP_PARAM_DESCRIPTION"
+                    filter="raw"/>
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option	value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option	value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN"
+        "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" method="upgrade" client="site">
+    <name>ja_teline_v</name>
+    <version>1.0.7</version>
+    <creationDate>28 Jan 2016</creationDate>
+    <author>JARtheme.com</author>
+    <authorEmail>webmaster@joomlart.com</authorEmail>
+    <authorUrl>http://www.t3-framework.org</authorUrl>
+    <copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights Reserved.</copyright>
+    <license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <t3>
+        <base>base-bs3</base>
+    </t3>
+    <description><![CDATA[<h1>|| Downloaded from || JARtheme.COM ||</h1>]]></description>
+    <files>
+        <filename>component.php</filename>
+        <filename>favicon.ico</filename>
+        <filename>index.html</filename>
+        <filename>index.php</filename>
+        <filename>helper.php</filename>
+        <filename>helper.content.php</filename>
+        <filename>thememagic.xml</filename>
+        <filename>templateInfo.php</filename>
+        <filename>templateHook.php</filename>
+        <filename>template_preview.png</filename>
+        <filename>template_thumbnail.png</filename>
+        <filename>templateDetails.xml</filename>
+        <filename>error.php</filename>
+        <filename>offline.php</filename>
+		<filename>ajax.php</filename>
+        <folder>acm</folder>
+        <folder>admin</folder>
+        <folder>etc</folder>
+        <folder>fonts</folder>
+        <folder>html</folder>
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>less</folder>
+        <folder>language</folder>
+        <folder>images</folder>
+        <folder>tpls</folder>
+        <folder>contenttype</folder>
+    </files>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.tpl_ja_teline_v.ini</language>
+        <language tag="en-GB">en-GB/en-GB.tpl_ja_teline_v.sys.ini</language>
+        <language tag="ar-AA">ar-AA/ar-AA.tpl_ja_teline_v.ini</language>
+        <language tag="ar-AA">ar-AA/ar-AA.tpl_ja_teline_v.sys.ini</language>
+    </languages>
+
+    <positions>
+        <position>languageswitcherload</position>
+        <position>head-search</position>
+        <position>mainnav</position>
+        <position>navhelper</position>
+        <position>breadcrumbs</position>
+        <position>off-canvas</position>
+        <position>sidebar</position>
+        <position>sidebar-1</position>
+        <position>sidebar-2</position>
+        <position>mast-col</position>
+        <position>footer</position>
+        <position>home-0</position>
+        <position>home-1</position>
+        <position>home-2</position>
+        <position>home-3</position>
+        <position>home-4</position>
+        <position>home-5</position>
+        <position>position-0</position>
+        <position>position-1</position>
+        <position>position-2</position>
+        <position>position-3</position>
+        <position>position-4</position>
+        <position>position-5</position>
+        <position>position-6</position>
+        <position>position-7</position>
+        <position>position-8</position>
+        <position>position-9</position>
+        <position>position-10</position>
+        <position>position-11</position>
+        <position>position-12</position>
+        <position>position-13</position>
+        <position>position-14</position>
+        <position>position-15</position>
+        <position>news-home</position>
+        <position>news-health</position>
+        <position>news-science</position>
+        <position>news-world</position>
+        <position>news-sport</position>
+        <position>news-style</position>
+        <position>news-tech</position>
+        <position>news-travel</position>
+        <position>events-home</position>
+        <position>media-home</position>
+        <position>gallery-home</position>
+        <position>tab-1</position>
+        <position>tab-2</position>
+        <position>topbar-l</position>
+        <position>topbar-r</position>
+        <position>whatsnew</position>
+        <position>banner-1</position>
+        <position>article-top</position>
+        <position>article-left</position>
+        <position>article-right</position>
+        <position>article-bottom</position>
+        <position>media-right</position>
+        <position>footer-0</position>
+        <position>footer-1</position>
+        <position>footer-2</position>
+        <position>footer-3</position>
+        <position>footer-4</position>
+        <position>footer-5</position>
+        <position>footer-6</position>
+        <position>footer-7</position>
+        <position>footer-8</position>
+        <position>footer-9</position>
+        <position>footer-10</position>
+        <position>acy-email-footer</position>
+        <position>debug</position>
+    </positions>
+
+    <config>
+        <fields name="params" addfieldpath="/plugins/system/t3/includes/depend">
+
+            <!-- Sample for add or disable template parameters -->
+            <!--fieldset name="menu_params" label="T3_PARAMS_MEGAMENU">
+                <field name="group_disable" type="t3depend" function="@group">
+                    <option for="menu_as_bg" value="no">menu_as_bg</option>
+                </field>
+            </fieldset-->
+            <fieldset name="theme_params" label="T3_THEME_LABEL" description="T3_THEME_DESC">
+                <field name="theme_params_default" type="t3depend" function="@group">
+          				<option for="logofootertype" value="image">
+          					logofooterimage
+          				</option>
+                  <option for="logotype" value="image">
+          					logoimage, logoimage_sm, enable_logoimage_sm
+          				</option>
+          				<option for="enable_logoimage_sm" value="1">
+          					logoimage_sm
+          				</option>
+          			</field>
+                <field name="theme_params_logolink" type="t3depend" function="@group">
+                    <option for="logolink" value="page">
+                        logolink_id
+                    </option>
+                </field>
+
+                <field name="logolink" type="list" default="default"
+                       label="T3_THEME_LOGOLINK_LABEL"
+                       description="T3_THEME_LOGOLINK_DESC">
+                    <option value="default">T3_THEME_LOGOLINK_DEFAULT</option>
+                    <option value="page">T3_THEME_LOGOLINK_PAGE</option>
+                </field>
+                <field name="logofootertype" type="list" default="image"
+          						 label="T3_THEME_LOGOFOOERTYPE_LABEL"
+          						 description="T3_THEME_LOGOFOOTERTYPE_DESC">
+          				<option value="text">T3_THEME_LOGOTYPE_TEXT</option>
+          				<option value="image">T3_THEME_LOGOTYPE_IMAGE</option>
+          			</field>   
+                <field name="logofooterimage" type="t3media" default=""
+    						 label="T3_THEME_LOGOFOOTERIMAGE_LABEL"
+    						 description="T3_THEME_LOGOFOOTERIMAGE_DESC"/> 
+                 
+                <field name="logolink_id" type="text" default=""
+                       label="T3_THEME_LOGOLINK_ID_LABEL"
+                       description="T3_THEME_LOGOLINK_ID_DESC"/>
+            </fieldset>
+
+            <fieldset name="navigation_params">
+                <field name="navigation_collapse_legend" type="hidden"/>
+
+                <field name="navigation_collapse_enable" type="hidden" default="0"
+                       global="1"/>
+            </fieldset>
+
+            <fieldset name="general_params">
+                <field
+                        name="show_typo_tools"
+                        type="radio"
+                        default="1"
+                        global="1"
+                        class="btn-group"
+                        label="TPL_TELINE_V_SHOW_TYPO_TOOLS_LABEL"
+                        description="TPL_TELINE_V_SHOW_TYPO_TOOLS_LABEL">
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field
+                        name="show_sharing_tools"
+                        type="radio"
+                        default="1"
+                        global="1"
+                        class="btn-group"
+                        label="TPL_TELINE_V_SHOW_SHARING_TOOLS_LABEL"
+                        description="TPL_TELINE_V_SHOW_SHARING_TOOLS_LABEL">
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+            </fieldset>
+
+
+        </fields>
+    </config>
+
+    <updateservers>
+        <server type="collection">http://update.joomlart.com/service/tracking/list.xml</server>
+    </updateservers>
+
+</extension>

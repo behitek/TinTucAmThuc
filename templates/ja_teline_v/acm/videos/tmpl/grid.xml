@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Magazine - Videos Grid</title>
+	<sampledata>
+	</sampledata>
+    <fields name="videos-grid">
+        <fieldset name="basic" label="TPL_FEATURED_BASIC_LABEL" description="TPL_FEATURED_FEATURED_BASIC_DESC">
+            <field name="catid"
+				   type="category"
+				   multiple="false"
+				   extension="com_content"
+				   label="TPL_FEATURED_CATEGORIES_SETTINGS_LABEL"
+                   description="TPL_FEATURED_CATEGORIES_SETTINGS_DESC"/>
+			<field
+					name="content_type"
+					type="hidden"
+					default="video"
+					label="TPL_CONTENT_TYPE_LABEL"
+					description="TPL_CONTENT_TYPE_DESC"
+					/>
+
+            <field
+                    name="show_front"
+                    type="list"
+                    default="show"
+                    label="TPL_FEATURED_SHOW_FEATURED_LABEL"
+                    description="TPL_FEATURED_SHOW_FEATURED_DESC">
+                <option value="show">JSHOW</option>
+                <option value="hide">JHIDE</option>
+                <option value="only">TPL_FEATURED_ONLY_FEATURED_VALUE</option>
+            </field>
+
+            <field name="featured_leading" type="text"
+                   description="TPL_FEATURED_NUM_LEADING_ARTICLES_DESC"
+                   label="TPL_FEATURED_NUM_LEADING_ARTICLES_LABEL"
+                   size="3"
+                   default="5"/>
+
+        </fieldset>
+
+        <fieldset name="ordering" label="TPL_FEATURED_ORDERING_LABEL">
+            <field name="article_ordering" type="list"
+                   default="publish_up"
+                   label="TPL_FEATURED_ARTICLE_ORDER_LABEL"
+                   description="TPL_FEATURED_ARTICLE_ORDER_DESC">
+                <option value="a.ordering">JGLOBAL_ORDERING</option>
+                <option value="fp.ordering">TPL_FEATURED_ORDER</option>
+                <option value="a.hits">JGLOBAL_MOST_HITS</option>
+                <option value="a.title">JGLOBAL_TITLE_ALPHABETICAL</option>
+                <option value="a.created">JGLOBAL_CREATED</option>
+                <option value="modified">JGLOBAL_MODIFIED</option>
+                <option value="publish_up">JPUBLISHED</option>
+            </field>
+
+            <field name="article_ordering_direction" type="list"
+                   default="TPL_FEATURED_ORDER_DIRECTION_LABEL"
+                   label="TPL_FEATURED_ORDER_DIRECTION_LABEL"
+                   description="TPL_FEATURED_ORDER_DIRECTION_DESC">
+                <option value="DESC">TPL_ORDER_DIRECTION_DESCENDING_VALUE</option>
+                <option value="ASC">TPL_ORDER_DIRECTION_ASCENDING_VALUE</option>
+            </field>
+        </fieldset>
+
+        <fieldset name="leading" label="TPL_FEATURED_LEADING_ARTICLES_LABEL" description="TPL_FEATURED_LEADING_ARTICLES_DESC">
+            <field name="leading_title" type="text"
+                   description="TPL_FEATURED_LEADING_TITLE_DESC"
+                   label="TPL_FEATURED_LEADING_TITLE_LABEL"
+                   size="20"
+                   default=""/>
+
+            <field name="show_leading_title" type="list"
+                   description="TPL_FEATURED_SHOW_LEADING_TITLE_DESC"
+                   label="TPL_FEATURED_SHOW_LEADING_TITLE_LABEL">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+            <field name="show_leading_intro" type="list"
+                   description="TPL_FEATURED_SHOW_INTRO_DESC"
+                   label="TPL_FEATURED_SHOW_INTRO_LABEL">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+
+            <field name="leading_block_position"
+                   type="list"
+                   default=""
+                   label="TPL_FEATURED_INFOBLOCK_POSITION_LABEL"
+                   description="TPL_FEATURED_INFOBLOCK_POSITION_DESC">
+                <option value="0">TPL_FEATURED_OPTION_ABOVE</option>
+                <option value="1">TPL_FEATURED_OPTION_BELOW</option>
+                <option value="2">TPL_FEATURED_OPTION_SPLIT</option>
+            </field>
+
+            <field name="leading_auto_play" type="list"
+                   description="TPL_FEATURED_LEADING_AUTO_PLAY_DESC"
+                   label="TPL_FEATURED_LEADING_AUTO_PLAY_LABEL">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field name="animation_type" type="list"
+                   description="TPL_FEATURED_ANIMATION_TYPE_DESC"
+                   label="TPL_FEATURED_ANIMATION_TYPE_LABEL">
+                <option value="slide">TPL_FEATURED_SLIDE_ANIMATION</option>
+                <option value="carousel-fade">TPL_FEATURED_CAROUSEL_ANIMATION</option>
+            </field>
+
+        </fieldset>
+
+    </fields>
+</form>

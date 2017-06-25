@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="gallery-list">
+        <fieldset name="basic" label="TPL_FEATURED_BASIC_LABEL" description="TPL_FEATURED_FEATURED_BASIC_DESC">
+            <field name="section_title" type="text"
+                   description="TPL_SECTION_TITLE_DESC"
+                   label="TPL_SECTION_TITLE_LABEL"
+                   size="20"
+                   default=""/>
+
+            <field name="show_section_title"
+                   type="list"
+                   default="0"
+                   description="TPL_SHOW_SECTION_TITLE_DESC"
+                   label="TPL_SHOW_SECTION_TITLE_LABEL">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="list_categories"
+                   type="category"
+                   multiple="true"
+                   extension="com_content"
+                   label="TPL_FEATURED_CATEGORIES_SETTINGS_LABEL"
+                   description="TPL_FEATURED_CATEGORIES_SETTINGS_DESC" />
+            <field
+                    name="content_type"
+                    type="hidden"
+                    default="gallery"
+                    label="TPL_CONTENT_TYPE_LABEL"
+                    description="TPL_CONTENT_TYPE_DESC"
+                    />
+
+            <field
+                    name="show_front"
+                    type="list"
+                    default="show"
+                    label="TPL_FEATURED_SHOW_FEATURED_LABEL"
+                    description="TPL_FEATURED_SHOW_FEATURED_DESC">
+                <option value="show">JSHOW</option>
+                <option value="hide">JHIDE</option>
+                <option value="only">TPL_FEATURED_ONLY_FEATURED_VALUE</option>
+            </field>
+
+            <field name="highlight_count" type="text"
+                   description="TPL_LIST_NUM_ARTICLE_DESC"
+                   label="TPL_LIST_NUM_ARTICLE_LABEL"
+                   size="3"
+                   default="4"
+                    />
+            <field
+                    name="show_slideshow"
+                    type="list"
+                    default="1"
+                    label="TPL_DISPLAY_FIRST_AS_SLIDE_SHOW_LABEL"
+                    description="TPL_DISPLAY_FIRST_AS_SLIDE_SHOW_DESC">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field name="highlight_columns" type="list"
+                  default="3"
+                   description="TPL_LIST_NUM_COLUMN_DESC"
+                   label="TPL_LIST_NUM_COLUMN_LABEL"
+                    >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+            </field>
+
+            <field name="highlight_limit" type="text"
+                   description="TPL_LIST_NUM_ARTICLE_PER_PAGE_DESC"
+                   label="TPL_LIST_NUM_ARTICLE_PER_PAGE_LABEL"
+                   size="3"
+                   default=""
+                    />
+
+            <field name="direction" type="list" default="hoz"
+                   description="TPL_LIST_LISTING_DIRECTION_DESC"
+                   label="TPL_LIST_LISTING_DIRECTION_LABEL"
+                    >
+                <option value="hoz">Horizontal</option>
+                <option value="ver">Vertical</option>
+            </field>
+
+
+            <field name="sidebar-pos" type="moduleposition" label="TPL_LIST_SIDEBAR_POSITION_LABEL" description="TPL_LIST_SIDEBAR_POSITION_DESC" />
+
+        </fieldset>
+
+        <fieldset name="ordering" label="TPL_FEATURED_ORDERING_LABEL">
+            <field name="article_ordering" type="list"
+                   default="publish_up"
+                   label="TPL_FEATURED_ARTICLE_ORDER_LABEL"
+                   description="TPL_FEATURED_ARTICLE_ORDER_DESC"
+                    >
+                <option value="a.ordering">JGLOBAL_ORDERING</option>
+                <option value="fp.ordering">TPL_FEATURED_ORDER</option>
+                <option value="a.hits">JGLOBAL_MOST_HITS</option>
+                <option value="a.title">JGLOBAL_TITLE_ALPHABETICAL</option>
+                <option value="a.created">JGLOBAL_CREATED</option>
+                <option value="modified">JGLOBAL_MODIFIED</option>
+                <option value="publish_up">JPUBLISHED</option>
+            </field>
+
+            <field name="article_ordering_direction" type="list"
+                   default="TPL_FEATURED_ORDER_DIRECTION_LABEL"
+                   label="TPL_FEATURED_ORDER_DIRECTION_LABEL"
+                   description="TPL_FEATURED_ORDER_DIRECTION_DESC"
+                    >
+                <option value="DESC">TPL_ORDER_DIRECTION_DESCENDING_VALUE</option>
+                <option value="ASC">TPL_ORDER_DIRECTION_ASCENDING_VALUE</option>
+            </field>
+        </fieldset>
+
+        
+
+        
+
+    </fields>
+</form>

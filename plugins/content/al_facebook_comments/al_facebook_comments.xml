@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0.1" type="plugin" group="content" method="upgrade">
+	<name>AL Plugin Facebook Comments for Joomla 2.5/3.0</name>
+	<author>Alex Lopez</author>
+	<creationDate>23 July 2012</creationDate>
+	<copyright>GPL</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>alexlopezit@facebook.com</authorEmail>
+	<authorUrl>www.alexlopezit.com</authorUrl>
+	<version>3.0.1</version>
+	<description>Thank you for installing the al Facebook comments for Joomla 2.5/3.0, this is a free plugin, please help me keeping it that way just visiting my website www.AlexLopezIT.com often and clicking on the ads. - Gracias por la instalar AL Comentarios Facebook para Joomla 2.5/3.0, este es un plugin gratuito, por favor ayudame a mantenerlo de esa manera, simplemente visita mi sitio web www.AlexLopezIT.com a menudo y haz clic en los anuncios. (v 3.0.1)</description>
+	<files>
+		<filename>index.html</filename>
+		<filename plugin="al_facebook_comments">al_facebook_comments.php</filename>
+		<filename plugin="al_facebook_comments">al_facebook_comments_sendmail.php</filename>
+		<folder>assets</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" label="Facebook comments">
+				<field name="@spacer11" type="spacer" default="Facebook comments settings" label="&lt;b&gt;Facebook comments settings&lt;/b&gt;" description="General Facebook comments settings" />
+				<field name="enable_comments" type="radio" default="1" label="Enable Comments Box" description="Enable Comments Box">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="app_id" type="text" default="" label="Facebook App ID" description="Add the ID of your Facebook application. This value will be used even in the opengraph options for the FB like button. (You must specify your App ID)" />
+				<field name="enable_email" type="radio" default="0" label="Enable email notifications" description="enable this option to receive an email notification per post, (You must provide an email address)">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="mail_to" type="text" default="" label="E-mail address" description="An email will be sent to this email address when a new comment is left on a post"/>
+				<field name="mail_subject" type="text" default="" label="E-mail Subject" description=""/>
+				<field name="color_scheme" type="list" default="light" label="Facebook color scheme" description="The color scheme used by the plugin. Can be 'light' or 'dark'">
+					<option value="light">light</option>
+					<option value="dark">dark</option>
+				</field>
+				<field name="comments_width" type="text" default="550" label="Width" description="The width (in pixels) of the plugin. The mobile version of the Comments plugin ignores the width parameter, and instead has a fluid width of 100%." />				
+				<field name="number_comments" type="text" default="10" label="Number visible posts" description="The number of comments to show by default. The minimum value is 1" />				
+				<field name="idioma" type="list" default="en" label="Select a language" description="Set the language for the plugin">
+					<option value="nl">Dutch</option>
+					<option value="en">English</option>
+					<option value="de">German</option>
+					<option value="fr">French</option>
+					<option value="it">Italian</option>
+					<option value="ja">Japanese</option>
+					<option value="ko">Korean</option>
+					<option value="pt">Portuguese</option>
+					<option value="ru">Russian</option>
+					<option value="es">Spanish</option>
+					<option value="tr">Turkish</option>
+				</field>
+				<field name="ignore_pagination" type="radio" default="0" label="Ignore Pagination" description="Put the FB social plugins only at the begin or the end of the article or in every page of the article">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="content_tobe_excluded_comments" type="text" default="" label="Excluded Content" description="Type in Content (Article) Id to be excluded with comma"/>
+				<field name="category_tobe_excluded_comments" type="category" extension="com_content" default="" label="Excluded Categories" description="Multiple select the categories that must not use the comment box plugin" multiple="true" size="5"/>
+				<field name="enable_comments_count" type="radio" default="0" label="Enable Post Counter" description="Enable the counter for the comments posted">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="@spacer12" type="spacer" default="OpenGraph Options" label="&lt;b&gt;OpenGraph Options&lt;/b&gt;" description="OpenGraph Options; this options will be used only on article view." />
+				<field name="enable_admin" type="radio" default="0" label="Enable Administration" description="Enable Comments Box Administration. (You must specify at least one administrator ID)">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="admin_id" type="text" default="" label="Facebook ID for administrators" description="Add the facebook IDs of the person enabled to moderate comments. Separate the uids by comma without spaces. This value will be used even in the opengraph options for the FB like button" />
+				<field name="type" type="text" default="article" label="Object type" description="Google Facebook Object Types to find out what values can you use here"/>
+				<field name="defaultimage" type="text" default="/plugins/content/al_facebook_comments/assets/images/enlace.png" label="Default image path" description="The path of the default image that must be show in the FB link"/>
+				<field name="description" type="radio" default="0" label="Object description" description="Object description for the shared link">
+					<option value="0">Use meta tag description</option>
+					<option value="1">Use first paragraph</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced" label="Social buttons">
+				<field name="@spacer21" type="spacer" default="Facebook like button" label="&lt;b&gt;Facebook like button&lt;/b&gt;" description="" />
+				<field name="enable_like" type="radio" default="1" label="Enable Facebook like button" description="Enable Facebook like button">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="send" type="radio" default="1" label="Show Send" description="Show send button">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+					<option value="2">Stand alone</option>
+				</field>
+				<field name="width_like" type="text" default="150" label="Width" description="The width of this button, in pixels"/>
+				<field name="@spacer22" type="spacer" default="Facebook share button" label="&lt;b&gt;Facebook share button&lt;/b&gt;" description="" />
+				<field name="enable_fbshare" type="radio" default="1" label="Enable Facebook share" description="Enable Facebook share">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="share_fbtext" type="text" default="Share" label="Facebook share button text" description="Facebook share button text"/>
+				<field name="@spacer23" type="spacer" default="Pinterest share button" label="&lt;b&gt;Pinterest share button&lt;/b&gt;" description="" />
+				<field name="enable_pinterest" type="radio" default="1" label="Enable Pinterest button" description="Pinterest button">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="@spacer24" type="spacer" default="LinkedIn share button" label="&lt;b&gt;LinkedIn share button&lt;/b&gt;" description="" />
+				<field name="enable_linkedin" type="radio" default="1" label="Enable LinkedIn button" description="LinkedIn button">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="@spacer25" type="spacer" default="Google Plus share button" label="&lt;b&gt;Google Plus share button&lt;/b&gt;" description="" />
+				<field name="enable_gplus" type="radio" default="1" label="Enable Google Plus button" description="Google Plus button">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="@spacer26" type="spacer" default="Twitter share button" label="&lt;b&gt;Twitter share button&lt;/b&gt;" description="" />
+				<field name="enable_twitter" type="radio" default="1" label="Enable Twitter button" description="Twitter button">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="tweetby" type="text" default="" label="Twitter username to mention" description="Twitter username to mention"/>
+				<field type="spacer" />
+				<field name="@spacer27" type="spacer" default="Social buttons settings" label="&lt;b&gt;Social buttons settings&lt;/b&gt;" description="Social buttons settings" />
+				<field name="content_tobe_excluded_buttons" type="text" default="" label="Excluded Content" description="Type in Content (Article) Id to be excluded with comma"/>
+				<field name="category_tobe_excluded_buttons" type="category" extension="com_content" default="" label="Excluded Categories" description="Multiple select the categories that must not use the plugins buttons" multiple="true" size="5"/>
+				<field name="position" type="radio" default="2" label="Position to show buttons" description="Choose the position for the like and share buttons">
+					<option value="1">Before Content</option>
+					<option value="2">After Content</option>
+					<option value="3">Both</option>
+				</field>
+				<field name="view_article_buttons" type="radio" default="1" label="Enable on Article view" description="Enable FB like and share buttons on Article view">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="view_frontpage_buttons" type="radio" default="0" label="Enable on FrontPage view" description="Enable FB like and share buttons on FrontPage view">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="view_category_buttons" type="radio" default="0" label="Enable on Category view" description="Enable FB like and share buttons on Category view">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="support" type="list" default="1" label="Facebook plugin link" description="Support this free plugin with a link">
+					<option value="1">Show Facebook plugin link</option>
+					<option value="0">Do not show link</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

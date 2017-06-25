@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params">
+		<fieldset name="avatar" label="Avatar">
+			<field name="avatar" type="media" default="" label="Avatar" description="User Avatar" />
+    </fieldset>
+  </fields>
+</form>

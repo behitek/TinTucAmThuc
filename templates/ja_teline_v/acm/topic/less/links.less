@@ -1,0 +1,47 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+
+.carousel-fade {
+  .carousel-inner {
+    .item {
+      opacity: 0;
+      transition-property: opacity;
+      z-index: 1;
+
+      &.active {
+        z-index: 10;
+      }
+    }
+
+    .active {
+      opacity: 1;
+    }
+
+    .active.left,
+    .active.right {
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .next.left,
+    .prev.right {
+      opacity: 1;
+    }
+  }
+
+  .carousel-control {
+    z-index: 2;
+  }
+}

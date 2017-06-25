@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system">
+	<name>HA_Tao link than thien</name>
+	<author>Hoàng Anh</author>
+	<creationDate>August 2014</creationDate>
+	<copyright>Copyright (C) 2005 - 2011 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>webquangnam@gmail.net</authorEmail>
+	<authorUrl>www.webquangnam.com</authorUrl>
+	<version>3.0</version>
+	<description>
+		<![CDATA[
+	<img src="../plugins/system/HHAsef/logo.png" />
+	<p style="color:maroon;fload:left">
+	Tạo tiếng việt không dấu khi tạo link thân thiện cho joomla 2.5 và 3X!<br/>
+	Được phát triển bởi: <a href="http://webquangnam.com/" target="_blank" color="red">webquangnam.com (Hoàng Anh IT)</a>
+	</p>
+	]]>
+	</description>
+	<files>
+		<filename plugin="HHAsef">HHAsef.php</filename>
+		<filename>index.html</filename>
+		<filename>logo.png</filename>
+	</files>
+</extension>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="attribs">
+	<fieldset name="general_attribs"
+			  label="General" description="General settings for all content types">
+
+		<field name="ctm_topic_id"
+			   type="modal_content"
+			   content_type="topic"
+			   exclude_types="topic"
+			   default=""
+			   label="Topic"
+			   description="Select a topic"/>
+	</fieldset>
+	</fields>
+</form>

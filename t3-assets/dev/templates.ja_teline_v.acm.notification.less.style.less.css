@@ -1,0 +1,53 @@
+.whatsnew-wrap {
+  position: relative;
+  top: -24px;
+}
+.whatsnew-wrap .magazine-links {
+  background: transparent;
+  border-top: 4px solid #cc0000;
+  box-shadow: inset 0 0 0 1px #e5e5e5;
+  height: 360px;
+  overflow-y: auto;
+  padding: 0;
+}
+@media (max-width: 992px) {
+  .whatsnew-wrap {
+    top: 53px;
+  }
+  .whatsnew-wrap .magazine-links {
+    border-top: 0;
+    border-bottom: 3px solid #cc0000;
+  }
+}
+.whatsnew-wrap .link-item {
+  border-bottom: 1px dotted #e5e5e5;
+  border-right: 1px dotted #e5e5e5;
+  position: relative;
+  min-height: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 72px;
+  overflow: hidden;
+}
+@media (min-width: 992px) {
+  .whatsnew-wrap .link-item {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.whatsnew-wrap .link-item .article-title h3 {
+  font-weight: 400;
+}
+.whatsnew-wrap .link-item .article-title a {
+  max-height: 24px;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.whatsnew-wrap .link-item .article-title a:hover,
+.whatsnew-wrap .link-item .article-title a:active,
+.whatsnew-wrap .link-item .article-title a:focus {
+  color: #cc0000;
+}

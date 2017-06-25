@@ -1,0 +1,67 @@
+.ie8 .separator .fa {
+  color: #333333;
+}
+.ie8 .separator:hover .fa {
+  color: #ffffff !important;
+}
+.ie8 .t3-mainbody {
+  border: 1px solid #ddd;
+  border-bottom: none;
+}
+.ie8 .t3-copyright {
+  border-top: 3px double #555;
+}
+.ie8.layout-media .t3-mainbody {
+  border: 1px solid #1e1e1e;
+}
+.ie8 .magazine-links {
+  border: 1px solid #e5e5e5;
+}
+.ie8 .magazine-links .item,
+.ie8 .magazine-links .link-item {
+  border: 0;
+}
+.ie8 .magazine-links .item .col-content,
+.ie8 .magazine-links .link-item .col-content {
+  background: #ffffff;
+}
+.ie8 .t3-sidebar .magazine-links {
+  border: none;
+}
+.ie8 .line-head:before {
+  left: -25px;
+}
+.ie8 .line-head:after {
+  right: -25px;
+}
+.ie8 .toggle-reading {
+  display: none;
+}
+.ie8 .blog .t3-content,
+.ie8 .blog .t3-sidebar {
+  display: inline-block !important;
+  float: left !important;
+}
+.ie8 .equal-height > .col {
+  display: inline-block !important;
+  float: left !important;
+  min-height: 250px;
+}
+.ie8 .video-sidebar .equal-height > .col {
+  min-height: 50px !important;
+  width: auto;
+}
+.ie8 .acymailing_moduleacy-email-footer .acymailing_form .acysubbuttons input {
+  margin-top: 20px;
+  padding-right: 10px;
+  background-color: #cc0000;
+}
+.ie8 #jform_profile_dob_spacer-lbl {
+  padding-right: 4.8px;
+}
+.ie8 .acymailing_moduleacy-email,
+.ie9 .acymailing_moduleacy-email,
+.ie10 .acymailing_moduleacy-email {
+  border: 5px solid #000000;
+  padding: 20px;
+}

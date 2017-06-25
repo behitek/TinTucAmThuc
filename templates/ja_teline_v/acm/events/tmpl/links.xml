@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="news-list-links">
+        <fieldset name="basic" label="TPL_FEATURED_BASIC_LABEL" description="TPL_FEATURED_FEATURED_BASIC_DESC">
+            <field name="list_categories"
+				   type="category"
+				   multiple="true"
+				   extension="com_content"
+				   label="TPL_FEATURED_CATEGORIES_SETTINGS_LABEL"
+                   description="TPL_FEATURED_CATEGORIES_SETTINGS_DESC"/>
+
+			<field
+					name="filter_preset"
+					type="list"
+					default="all_events"
+					label="Type"
+					description="Select a type">
+				<option value="all_events">All Events</option>
+				<option value="upcoming_events">It's Upcoming Events</option>
+				<option value="current_events">Current Events</option>
+				<option value="past_events">Past Events</option>
+			</field>
+
+            <field
+                    name="show_front"
+                    type="list"
+                    default="show"
+                    label="TPL_FEATURED_SHOW_FEATURED_LABEL"
+                    description="TPL_FEATURED_SHOW_FEATURED_DESC">
+                <option value="show">JSHOW</option>
+                <option value="hide">JHIDE</option>
+                <option value="only">TPL_FEATURED_ONLY_FEATURED_VALUE</option>
+            </field>
+
+            <field name="count" type="text"
+                   description="TPL_LIST_NUM_ARTICLE_DESC"
+                   label="TPL_LIST_NUM_ARTICLE_LABEL"
+                   size="3"
+                   default="4"
+                    />
+
+        </fieldset>
+
+        <fieldset name="ordering" label="TPL_FEATURED_ORDERING_LABEL">
+            <field name="article_ordering" type="list"
+                   default="publish_up"
+                   label="TPL_FEATURED_ARTICLE_ORDER_LABEL"
+                   description="TPL_FEATURED_ARTICLE_ORDER_DESC"
+                    >
+                <option value="a.ordering">JGLOBAL_ORDERING</option>
+                <option value="fp.ordering">TPL_FEATURED_ORDER</option>
+                <option value="a.hits">JGLOBAL_MOST_HITS</option>
+                <option value="a.title">JGLOBAL_TITLE_ALPHABETICAL</option>
+                <option value="a.created">JGLOBAL_CREATED</option>
+                <option value="modified">JGLOBAL_MODIFIED</option>
+                <option value="publish_up">JPUBLISHED</option>
+            </field>
+
+            <field name="article_ordering_direction" type="list"
+                   default="TPL_FEATURED_ORDER_DIRECTION_LABEL"
+                   label="TPL_FEATURED_ORDER_DIRECTION_LABEL"
+                   description="TPL_FEATURED_ORDER_DIRECTION_DESC"
+                    >
+                <option value="DESC">TPL_ORDER_DIRECTION_DESCENDING_VALUE</option>
+                <option value="ASC">TPL_ORDER_DIRECTION_ASCENDING_VALUE</option>
+            </field>
+        </fieldset>
+    </fields>
+</form>

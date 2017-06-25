@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="notification-new-items">
+        <fieldset name="basic" label="TPL_FEATURED_BASIC_LABEL" description="TPL_FEATURED_FEATURED_BASIC_DESC">
+            <field name="list_categories" type="category" extension="com_content" label="TPL_FEATURED_CATEGORIES_SETTINGS_LABEL"
+                   description="TPL_FEATURED_CATEGORIES_SETTINGS_DESC" multiple="true"/>
+
+            <field name="count" type="text"
+                   description="TPL_LIST_NUM_ARTICLE_DESC"
+                   label="TPL_LIST_NUM_ARTICLE_LABEL"
+                   size="3"
+                   default="4"
+                    />
+
+            <field name="duration" type="text"
+                   description="TPL_LIST_NUM_DAYS_DESC"
+                   label="TPL_LIST_NUM_DAYS_LABEL"
+                   size="3"
+                   default="1"
+                    />
+
+            <field addfieldpath="/plugins/system/jacontenttype/models/fields/"
+                   name="content_type"
+                   type="jactt"
+                   label="TPL_CONTENT_TYPE_FIELD_CONTENTTYPE_LABEL"
+                   description="TPL_CONTENT_TYPE_FIELD_CONTENTTYPE_DESC"
+                    >
+                <option value="">JDEFAULT</option>
+            </field>
+
+        </fieldset>
+
+    </fields>
+</form>

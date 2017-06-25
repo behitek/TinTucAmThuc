@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params">
+		<fieldset name="t3_extrafields_params" label="T3_CATEGORY_GROUP_LABEL" description="T3_CATEGORY_GROUP_DESC">
+		<field name="classes" type="text" default="" label="TELINE_V_CATEGORY_CLASS_LABEL" description="TELINE_V_CATEGORY_CLASS_DESC" />
+    </fieldset>
+  </fields>
+</form>

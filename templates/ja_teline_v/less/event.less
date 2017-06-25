@@ -1,0 +1,295 @@
+// VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Modify this for custom colors, font-sizes, etc
+
+.layout-events {
+
+  body {
+    background: url(../images/ev-bg.jpg) no-repeat fixed center top @brand-event;
+    background-size: 100%;
+    @media screen and (min-width: @screen-xs) {
+      background-size: cover;
+    }
+  }
+
+  // HEADER
+  // ---------------------------------------------------------
+  .t3-header {
+    .container {
+      // Control screen mobile
+      @media screen and (max-width: @grid-float-breakpoint) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .row {
+      margin: 0;
+    }
+
+    @media screen and (min-width: @screen-xs) {
+      padding-top: @global-padding * 2;
+      padding-bottom: @global-padding * 2;      
+    }
+  }
+
+  .logo {
+    text-align: center;
+    @media screen and (max-width: @grid-float-breakpoint) {
+      padding-left: 0;
+      padding-right: 0;
+      width: auto;
+    }
+  }
+
+  .logo-text a {
+    color: @white;
+    font-size: @font-size-h1 * 2.5;
+    text-shadow:  0 6px 12px rgba(0,0,0,.5);
+
+    // Control for tablet
+    @media screen and (max-width: @grid-float-breakpoint) {
+      color: @black;
+      font-size: @font-size-h1;
+    }
+
+    // Control for mobile
+    @media screen and (max-width: @screen-xs) {
+      font-size: @font-size-h3;
+    }
+
+    span {
+      @media screen and (max-width: @grid-float-breakpoint) {
+        text-shadow: none;
+      }
+    }
+  }
+
+  .logo-text .site-slogan {
+    color: @gray-lighter;
+    color: rgba(255,255,255,.8);
+    font-size: @font-size-large;
+    text-shadow: 0 2px 4px rgba(0,0,0,.5);
+  }
+
+
+  // TOPNAV
+  // ---------------------------------------------------------
+  .t3-topnav .nav > .active > a {
+    background: @brand-event;
+    color: @white;
+  }
+
+
+  // MAINBODY
+  // ---------------------------------------------------------
+  .t3-mainbody {
+    background: #fff;
+    background: transparent;
+    box-shadow: 0 5px 15px rgba(0,0,0,.8);
+  }
+
+
+  // FOOTER
+  // ---------------------------------------------------------
+  .t3-footer {
+    > .container {
+      border-top: 4px solid @brand-event;
+      box-shadow: 0 5px 15px rgba(0,0,0,.8);
+    }
+
+    .logo-text a {
+      font-size: @font-size-h1 * 1.5;
+      text-shadow: none;
+      @media screen and (min-width: @screen-sm) {
+        font-size: @font-size-h1 * 2;
+      }
+    }
+
+    .logo-text .site-slogan {
+      font-size: @font-size-base;
+      text-shadow: none;
+    }
+  }
+
+
+  // EVENT VIEW
+	// ---------------------------------------------------------
+
+	// Event Grid
+	// ----------
+	.article-main {
+    padding: 0;
+    .make-row();
+
+    .event-main {
+      .make-md-column(8);
+    }
+    .event-aside {
+      .make-md-column(4);
+    }
+
+    // Make the comlumns has equal-height
+		@media screen and (min-width: @screen-lg) {
+      > .col {
+        display: table-cell !important;
+        vertical-align: top !important;
+        float: none !important;
+      }
+    }
+	
+		.content_rating {
+			height: 15px;
+			margin-bottom: @t3-global-margin/2;
+		}
+		
+		.content_vote {
+			display: block;
+			margin-bottom: @t3-global-margin;
+			
+			.btn {
+				@media screen and (max-width: @screen-xs-max) {
+					margin-top: 10px;
+				}
+			}
+		}
+
+  }
+
+
+  // Detail
+  // -------
+  .event-main {
+    background: #fff;
+    // Title
+    .article-title h3 {
+      font-size: @font-size-h3;
+      margin-top: 0;
+      padding-top: @global-padding;
+      @media screen and (min-width: @screen-sm) {
+        font-size: @font-size-h1;
+        padding-top: @global-padding;
+      }
+
+    }
+
+    .magazine-item-main {
+      padding-bottom: @global-padding;
+    }
+
+    // Media
+    .magazine-item-media {
+      width: 100%;
+      max-height: @line-height-computed * 14;
+      overflow: hidden;
+      margin-bottom: @global-margin;
+      .clearfix();
+      .item-image {
+        float: none !important;
+				margin: 0;
+        img {
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    .magazine-item-ct {
+      font-size: @font-size-large;
+      font-weight: @font-weight-light;
+      max-height: none;
+    }
+  }
+
+
+  // Aside
+  // -------
+  .event-aside {
+    background: @gray-dark-max;
+    background: rgba(0,0,0,.75);
+    padding-top: @global-padding;
+    padding-bottom: @global-padding;
+    @media screen and (max-width: @screen-sm) {
+      min-height: 1px !important;
+    }
+
+    .t3-module {
+      background: @gray-darker;
+      padding-bottom: 0;
+    }
+
+    .module-title {
+      background: transparent;
+      border-bottom: 1px solid @gray-dark;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      padding: @global-padding / 2;
+      display: block;
+    }
+
+    .module-ct {
+      background: transparent;
+      color: @gray-lighter;
+      padding: @global-padding / 2;
+    }
+
+    // Event Logo
+    .event-logo {
+      background: @white;
+      text-align: center;
+      img {
+        max-width: 100%;
+      }
+    }
+
+    // Event Location
+    .event-location {
+      background: @brand-event;
+    }
+    address {
+      font-size: @font-size-base;
+      text-transform: uppercase;
+      strong {
+        font-size: @font-size-large;
+        color: #fff;
+      }
+    }
+
+    // Event Sponsors
+    .event-sponsors {
+    }
+
+    // Event Speakers
+    .event-speakers {
+    }
+
+    // Event Tickets
+    .event-tickets {
+      .table {
+        margin: 0;
+        th {
+          background: @gray-dark;
+          border-bottom: 1px solid @gray-dark;
+        }
+        td {
+          border-top: 1px solid @gray-dark;
+        }
+      }
+    }
+
+  }
+
+
+  // ---------------------------------------------------------
+  // FOOTER
+  // ---------------------------------------------------------
+  .t3-footer {
+    .logo-text a {
+      @media screen and (max-width: @grid-float-breakpoint) {
+        color: @white;
+      }
+    }
+  }
+
+
+  // End
+}

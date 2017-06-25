@@ -1,0 +1,51 @@
+// RTL STYLES
+// ------------------------------------------------------
+
+// Article Images
+// --------------
+article img[align=left],
+.img_caption.left,
+.pull-left.item-image {
+  @media (max-width: @screen-sm) {
+    margin: 0 @grid-gutter-width @global-margin 0;
+  }
+}
+
+article img[align=right],
+.img_caption.right,
+.pull-right.item-image {
+  @media (max-width: @screen-sm) {
+    margin: 0 0 @global-margin @grid-gutter-width;
+  }
+}
+
+.languageswitcherload {
+  ul {
+    float: left;
+  }
+}
+
+// Menu
+// ----------------
+div.t3-megamenu .nav > .dropdown > .dropdown-toggle .caret {
+	left: -9px;
+}
+
+//Magezine category
+.magazine-category-title h2 > a {
+	background-image: url("../@{t3-image-path}/arrow-section-rtl.gif");
+}
+
+.layout-magazine .event-main .table [class^="fa"] {
+	margin-left: 5px;
+}
+
+.magazine-links .item-event .event-time .month-year {
+	white-space: nowrap;
+}
+
+
+.t3-megamenu .mega-dropdown-menu {
+  margin-right: 0 !important;
+  .box-shadow(-4px 4px 0px 0 rgba(0, 0, 0, 0.1));
+}

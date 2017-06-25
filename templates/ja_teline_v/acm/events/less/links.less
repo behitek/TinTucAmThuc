@@ -1,0 +1,98 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+.magazine-links  {
+
+  // General style
+  // -------------
+  .col-media {
+    padding: 0;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  // Col content
+  .col-content {
+    .article-title h3 {
+      margin: 0;
+      font-size: @font-size-base !important;
+      a:hover, a:focus, a:active {
+        color: @link-hover-color;
+      }
+    }
+  }
+
+  // Event style
+  // -----------
+  .item-event {
+    background: lighten(@gray-lighter, 5%);
+    margin-bottom: @global-margin / 2;
+    padding: 0;
+    .clearfix();
+
+    .event-time {
+      background: darken(@gray-lighter, 3%);
+      float: left;
+      font-weight: @font-weight-bold;
+      margin: 0 @global-margin 0 0;
+      width: 87px;
+      height: 87px;
+      padding: (@global-padding / 2);
+      text-align: center;
+
+      @media screen and (min-width: @screen-sm) {
+        margin: 0;
+      }
+
+      .date {
+        display: block;
+        font-size: @font-size-large * 2;
+        line-height: 1;
+        margin-top: 7px;
+      }
+
+      .month-year {
+        color: @gray;
+        font-size: @font-size-small;
+        font-weight: @font-weight-normal;
+        text-transform: uppercase;
+      }
+    }
+
+    .col-content {
+      padding-top: @grid-gutter-width/2;
+      width: auto;
+      float: none;
+      margin-left: 87px;
+
+      h3 {
+        height: (@line-height-computed * 2 - 1px);
+        overflow: hidden;
+      }
+    }
+
+    &:hover {
+      .event-time {
+        background-color: @brand-event;
+        color: @white;
+
+        .month-year {
+          color: @white;
+        }
+      }
+    }
+  }
+ }

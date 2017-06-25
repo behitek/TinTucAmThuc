@@ -1,0 +1,88 @@
+.magazine-featured.style-4 {
+
+  // Basic Elements
+  // -------------------------
+  .magazine-section-heading {
+    background: @module-title-bg;
+    color: @module-title-color;
+    position: relative;
+  }
+
+  .item {
+    overflow: hidden;
+    .news-item {
+      padding-left: 0;
+      padding-right: 0;
+      &:hover .media-mask {
+        height: 60%;
+      }
+    }
+  }
+
+
+  // Item Media
+  // ------------------------------
+  .magazine-item-media {
+    position: relative;
+
+    .media-mask {
+      #gradient > .vertical(rgba(0, 0, 0, 0); rgba(0, 0, 0, 0.65); 0%; 100%);
+      display: block;
+      height: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .item-image {
+      float: none !important;
+      height: @line-height-computed * 7;
+      margin-bottom: 0;
+      overflow: hidden;
+    }
+
+    .category-name {
+      top: @global-padding;
+      bottom: auto;
+    }
+
+  }
+
+
+  // Item main
+  // ------------------------------
+  .magazine-item-main {
+    position: absolute;
+    bottom: 0;
+    padding: @global-padding;
+    width: 100%;
+
+    .article-title {
+      margin: 0;
+      h3 {
+        font-size: @font-size-large;
+        font-weight: @font-weight-normal;
+        margin: 0;
+        text-shadow: 0 3px 5px rgba(0,0,0,.3);
+      }
+      a {
+        color: @white;
+        outline: none;
+        &:hover, &:focus, &:active {
+          color: @white;
+          text-decoration: none;
+        }
+      }
+    }
+
+
+    .article-aside {
+      margin-bottom: 0;
+    }
+  }
+
+  .magazine-carousel .carousel-control-btns {
+    top: -50px;
+  }
+}
